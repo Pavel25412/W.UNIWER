@@ -1,0 +1,303 @@
+/* style.css */
+
+:root {
+    --main-red: #D64640;
+    --main-white: #FFFFFF;
+    --text-dark: #333333;
+    --gray-bg: #F9F9F9;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-dark);
+    background-color: var(--main-white);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Хедер --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-red);
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover, nav a.active {
+    color: var(--main-red);
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+/* --- Главный экран (Hero) --- */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--main-white) 50%, var(--main-red) 50%);
+    overflow: hidden;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 60px;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.hero h1 span {
+    color: var(--main-red);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--main-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b53530;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(214, 70, 64, 0.4);
+}
+
+/* --- СЕКЦИЯ НОВОСТЕЙ (Вернул блоки!) --- */
+.news-section {
+    padding: 80px 20px;
+    background-color: var(--gray-bg);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news-grid {
+    display: flex; /* Это делает блоки в ряд */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-card {
+    background: white;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--main-red);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.news-link {
+    color: var(--text-dark);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+/* --- УСЛУГИ (С подсветкой) --- */
+.page-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-title .line {
+    width: 80px;
+    height: 4px;
+    background-color: var(--main-red);
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.4s ease;
+    position: relative;
+    top: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(214, 70, 64, 0.25);
+    border-color: rgba(214, 70, 64, 0.3);
+}
+
+.service-card h3 {
+    color: var(--main-red);
+    margin-bottom: 15px;
+}
+
+/* --- КОНТАКТЫ (Исправление формы) --- */
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form {
+    flex: 1.5;
+    min-width: 300px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--main-red);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--main-red);
+}
+
+/* --- Футер --- */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: auto;
+}

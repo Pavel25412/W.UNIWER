@@ -1,33 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>W/U - Поступление в Польшу</title>
-  <link rel="stylesheet" href="public/style.css">
+  <title>WU - Главная</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="public/LOGO%20INST.png" alt="WU logo" id = "main-logo">
-      </div>
-      <ul>
-        <li><a href="#">Вузы</a>
-        <li><a href="#">Услуги</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#" class="nav-btn">Консультация</a></li>
-      </ul>
-    </nav>
-  </header>
-<main>
-  <section class="hero">
-    <h1>Твой путь в университеты Польши</h1>
-    <p>Мы помогаем с документами, адаптацией и выбором карьеры.</p>
-    <button id ="cta-button">Узнать больше</button>
-  </section>
-</main>
-</body>
 
+<header>
+  <a href="index.html">
+    <img src="logo.png" alt="WU Logo" class="logo-img">
+  </a>
+  <nav>
+    <a href="index.html" class="active">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Твое будущее <br>в <span>Польше</span></h1>
+    <p>Профессиональная помощь с поступлением, визами и адаптацией. Более 500 довольных студентов.</p>
+    <div style="margin-top: 30px;">
+      <a href="services.html" class="btn">Выбрать ВУЗ</a>
+    </div>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="section-header">
+    <h2 style="font-size: 2rem; color: #333;">Новости и Акции</h2>
+    <div style="width: 60px; height: 3px; background: #D64640; margin: 10px auto;"></div>
+  </div>
+
+  <div class="news-grid">
+    <div class="news-card">
+      <div class="news-image" style="background-image: url('https://life.berkeley.edu/wp-content/uploads/2024/04/2019_04_24_UCB_Admissions_day2-12_edited.jpg');"></div>
+      <div class="news-content">
+        <span class="news-date">31.01.2024</span>
+        <h3>Старт набора на 2024/2025 год</h3>
+        <p>Приемные комиссии открывают регистрацию. Успей подать заявку до конца марта, чтобы получить скидку на услуги.</p>
+        <a href="#" class="news-link">Читать далее &rarr;</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=500&q=60');"></div>
+      <div class="news-content">
+        <span class="news-date">25.01.2024</span>
+        <h3>Изменения в студенческих визах</h3>
+        <p>Консульство обновило список необходимых документов для получения визы типа D. Читайте наш полный разбор.</p>
+        <a href="#" class="news-link">Читать далее &rarr;</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=500&q=60');"></div>
+      <div class="news-content">
+        <span class="news-date">10.01.2024</span>
+        <h3>Вебинар: Жизнь в Варшаве</h3>
+        <p>Бесплатный онлайн-урок для будущих студентов. Расскажем про цены на жилье, транспорт и подработку.</p>
+        <a href="#" class="news-link">Читать далее &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>&copy; 2023 WU Admission. Все права защищены.</p>
+</footer>
+
+</body>
 </html>
