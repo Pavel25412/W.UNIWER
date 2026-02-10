@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGH Варшава - Школа Экономики</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contact.html">Контакты</a>
+        <a href="contact.html" class="nav-btn">Подать заявку</a>
+    </nav>
+</header>
+
+<main>
+    <section class="uni-page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://ssl.sgh.waw.pl/pl/uczelnia/o-uczelni/wirtualny-spacer/budynek-g-aula-spadochronowa/PublishingImages/Budynek%20G%20-%20Aula%20Spadochronowa%20-%203.jpg');">
+        <div style="z-index: 2;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SGH_Warsaw_School_of_Economics_04.png"; alt="SGH Logo" class="uni-logo-large" style="padding: 15px; width: auto; max-width: 200px; background: white;">
+            <h1 class="page-title-big" style="color: white; margin-bottom: 10px;">Szkoła Główna Handlowa</h1>
+        </div>
+    </section>
+
+    <div class="uni-stats-grid">
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">#1</span>
+            <span class="uni-stat-label">Экономический ВУЗ</span>
+        </div>
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">1906</span>
+            <span class="uni-stat-label">Год основания</span>
+        </div>
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">8500+</span>
+            <span class="uni-stat-label">PLN (Старт зарплаты)</span>
+        </div>
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">CEO</span>
+            <span class="uni-stat-label">Кузница кадров</span>
+        </div>
+    </div>
+
+    <div class="page-wrapper" style="padding-top: 0;">
+        <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+            <div class="info-block">
+                <div class="info-text">
+                    <h3>Польский Гарвард</h3>
+                    <p>SGH — это бренд. Если вы хотите работать в "Большой Четверке" (Deloitte, PwC, EY, KPMG) или стать министром финансов — вам сюда.</p>
+                    <p>Каждый третий президент крупной компании в Польше закончил SGH. Здесь не просто учат теории, здесь создают связи (нетворкинг), которые работают всю жизнь.</p>
+                </div>
+                <div class="info-img" style="background-image: url('https://gazeta.sgh.waw.pl/sites/default/files/styles/1_1_xl/public/2022-09/SGH_Gmach_Glowny_Aula_Spadochronowa_M_Zukowska_0561.jpg?h=a46e1236&itok=zQeHl5eM');"></div>
+            </div>
+
+            <div class="info-block reverse">
+                <div class="info-text">
+                    <h3>Уникальная система</h3>
+                    <p>В SGH нет жестких групп. Студент сам формирует свое расписание (как в США). Вы можете сами выбирать лекторов и предметы.</p>
+                    <p>Кампус находится прямо у метро Pole Mokotowskie. Главное здание (G) известно своей "Парашютной Аудиторией" — огромной пирамидой под стеклянным куполом.</p>
+                </div>
+                <div class="info-img" style="background-image: url('https://bi.im-g.pl/im/89/65/15/z22436489IER,Szkola-Glowna-Handlowa.jpg');"></div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+            <section class="campus-section">
+                <h2 style="text-align: center; margin-bottom: 30px;">Кампус SGH</h2>
+
+                <div class="campus-tabs">
+                    <button class="campus-btn active" onclick="openCampus('main')">Главный корпус (G)</button>
+                    <button class="campus-btn" onclick="openCampus('library')">Библиотека (C)</button>
+                    <button class="campus-btn" onclick="openCampus('metro')">Метро</button>
+                </div>
+
+                <div id="main" class="campus-content active">
+                    <div class="campus-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.435384708771!2d21.01836137694902!3d52.23553255725359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x7220e0c3b37803d3!2sUniwersytet%20Warszawski!5e0!3m2!1sru!2spl!4v1706700000000!5m2!1sru!2spl9" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="campus-info">
+                        <h3>Здание G (Gmach Główny)</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Сердце ВУЗа. Здесь проходят главные лекции.</p>
+                        <ul class="campus-list">
+                            <li><span class="faculty-icon">🏛️</span> Парашютная Аудитория</li>
+                            <li><span class="faculty-icon">🎓</span> Ректорат</li>
+                            <li><span class="faculty-icon">☕</span> Студенческое кафе</li>
+                        </ul>
+                        <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+                    </div>
+                </div>
+
+                <div id="library" class="campus-content">
+                    <div class="campus-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.6468305739815!2d20.97984207694767!3d52.21345905886673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccbdd7a9416b%3A0x6b44555430331665!2sWydzia%C5%82%20Fizyki%20Uniwersytetu%20Warszawskiego!5e0!3m2!1sru!2spl!4v1706700100000!5m2!1sru!2spl0" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="campus-info">
+                        <h3>Здание C (Библиотека)</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Современный корпус. Здесь находится крупнейшая экономическая библиотека Польши.</p>
+                        <ul class="campus-list">
+                            <li><span class="faculty-icon">📚</span> Библиотека</li>
+                            <li><span class="faculty-icon">💻</span> Компьютерные залы</li>
+                        </ul>
+                        <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+                    </div>
+                </div>
+
+                <div id="metro" class="campus-content">
+                    <div class="campus-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.6468305739815!2d20.97984207694767!3d52.21345905886673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccbdd7a9416b%3A0x6b44555430331665!2sWydzia%C5%82%20Fizyki%20Uniwersytetu%20Warszawskiego!5e0!3m2!1sru!2spl!4v1706700100000!5m2!1sru!2spl1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="campus-info">
+                        <h3>Метро Pole Mokotowskie</h3>
+                        <p style="color: #666; margin-bottom: 20px;">ВУЗ находится в 100 метрах от выхода из метро. Идеальная логистика.</p>
+                        <ul class="campus-list">
+                            <li><span class="faculty-icon">🚇</span> Станция метро (M1)</li>
+                            <li><span class="faculty-icon">🌳</span> Парк Pole Mokotowskie</li>
+                            <li><span class="faculty-icon">🍸</span> Клуб "Park"</li>
+                        </ul>
+                        <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+            <h2 style="margin-bottom: 30px; text-align: center;">Общежития SGH</h2>
+            <div class="dorm-grid">
+                <div class="dorm-card">
+                    <div class="dorm-img" style="background-image: url('https://ssl.sgh.waw.pl/pl/studenci/domy-studenckie/PublishingImages/Dom%20Studenta%20nr%201%20Sabinki%20-%204.jpg');"></div>
+                    <div class="dorm-info">
+                        <h4>DS Sabinki</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Находится прямо через дорогу от главного корпуса! Лучшее расположение.</p>
+                        <span class="dorm-price">от 580 zł / мес</span>
+                    </div>
+                </div>
+                <div class="dorm-card">
+                    <div class="dorm-img" style="background-image: url('https://ssl.sgh.waw.pl/pl/studenci/domy-studenckie/PublishingImages/Dom%20Studenta%20nr%202%20Grosik%20-%201.jpg');"></div>
+                    <div class="dorm-info">
+                        <h4>DS Grosik</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Уютное общежитие в 10 минутах пешком. Блочная система.</p>
+                        <span class="dorm-price">от 520 zł / мес</span>
+                    </div>
+                </div>
+                <div class="dorm-card">
+                    <div class="dorm-img" style="background-image: url('https://mapa.targeo.pl/i/cache/vumaps/18/25/1825867-2278064-1620x1080.jpg');"></div>
+                    <div class="dorm-info">
+                        <h4>DS Hermes</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Легендарное место тусовок. Недавно был проведен ремонт.</p>
+                        <span class="dorm-price">от 480 zł / мес</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 20px;">Стоимость обучения (2024/25)</h2>
+            <div class="pricing-controls">
+                <button class="currency-btn active" onclick="setCurrency('EUR')">EUR (€)</button>
+                <button class="currency-btn" onclick="setCurrency('PLN')">PLN (zł)</button>
+                <button class="currency-btn" onclick="setCurrency('UAH')">UAH (₴)</button>
+            </div>
+
+            <table class="prices-table">
+                <thead>
+                <tr>
+                    <th>Направление</th>
+                    <th>Язык</th>
+                    <th>Цена / год</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Global Business</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="4200">4200 €</td>
+                </tr>
+                <tr>
+                    <td><strong>International Economics</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="4000">4000 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Management (Zarządzanie)</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="3900">3900 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Количественные методы (Big Data)</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="4200">4200 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Все программы на ПОЛЬСКОМ</strong></td>
+                    <td>Польский</td>
+                    <td class="price-val" data-eur="2800">2800 €</td>
+                </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: right;">*SGH — один из самых дорогих, но окупаемых ВУЗов.</p>
+
+        </div>
+    </div>
+
+    <section style="background: var(--color-red); color: white; padding: 80px 20px; text-align: center;">
+        <h2 style="color: white; margin-bottom: 20px;">Готов к большой карьере?</h2>
+        <p style="max-width: 600px; margin: 0 auto 40px;">В SGH сложный вступительный процесс (часто нужен тест по математике). Мы поможем подготовиться.</p>
+        <a href="contact.html" class="big-btn" style="background: white; color: var(--color-red);">Оценить шансы</a>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>Поступим вместе</h2>
+        <a href="contact.html" class="big-btn">Оставить заявку</a>
+    </div>
+    <div class="copyright">© 2024 WU Admission.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            start: "top -50",
+            end: 99999,
+            toggleClass: { className: "scrolled", targets: "header" }
+        });
+        gsap.from(".info-block", {
+            y: 50, opacity: 0, duration: 0.8, stagger: 0.3, scrollTrigger: ".info-block"
+        });
+    });
+
+    // === ТАБЫ КАМПУСОВ ===
+    function openCampus(campusId) {
+        document.querySelectorAll('.campus-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.campus-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(campusId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // === ВАЛЮТЫ ===
+    const RATES = { EUR: 1, PLN: 4.30, UAH: 42.50 };
+    const SYMBOLS = { EUR: '€', PLN: 'zł', UAH: '₴' };
+
+    function setCurrency(currency) {
+        document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        const prices = document.querySelectorAll('.price-val');
+        prices.forEach(price => {
+            const basePrice = parseFloat(price.getAttribute('data-eur'));
+            const newPrice = Math.round(basePrice * RATES[currency]);
+            gsap.to(price, {
+                duration: 0.2, opacity: 0,
+                onComplete: () => {
+                    price.innerText = `${newPrice} ${SYMBOLS[currency]}`;
+                    gsap.to(price, { duration: 0.2, opacity: 1 });
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

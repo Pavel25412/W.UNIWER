@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Варшавский Университет (UW) - Полный обзор</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contact.html">Контакты</a>
+        <a href="contact.html" class="nav-btn">Подать заявку</a>
+    </nav>
+</header>
+
+<main>
+    <section class="uni-page-hero">
+        <div style="z-index: 2;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/LOGO_IKP_%28cropped%29.png" alt="UW Logo" class="uni-logo-large">
+            <h1 class="page-title-big" style="color: white; margin-bottom: 10px;">Uniwersytet Warszawski</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;"></p>
+        </div>
+    </section>
+
+    <div class="uni-stats-grid">
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">#1</span>
+            <span class="uni-stat-label">В рейтинге Perspektywy</span>
+        </div>
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">1816</span>
+            <span class="uni-stat-label">Год основания</span>
+        </div>
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">45k+</span>
+            <span class="uni-stat-label">Студентов</span>
+        </div>
+        <div class="uni-stat-item">
+            <span class="uni-stat-val">5</span>
+            <span class="uni-stat-label">Нобелевских лауреатов</span>
+        </div>
+    </div>
+
+    <div class="page-wrapper" style="padding-top: 0;">
+        <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+            <div class="info-block">
+                <div class="info-text">
+                    <h3>Королевский ВУЗ</h3>
+                    <p>Варшавский университет — это символ польской науки. Основанный в 1816 году, он пережил войны и восстания, сохранив статус лучшего ВУЗа страны.</p>
+                    <p>Диплом UW признается во всем мире. Выпускники работают в Google, Microsoft, JP Morgan. Среди выпускников — Фредерик Шопен и 5 Нобелевских лауреатов.</p>
+                </div>
+                <div class="info-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Brama_G%C5%82%C3%B3wna_UW.jpg');"></div>
+            </div>
+
+            <div class="info-block reverse">
+                <div class="info-text">
+                    <h3>Библиотека (BUW)</h3>
+                    <p>Гордость университета — библиотека с садом на крыше, одна из самых красивых в Европе. Это любимое место студентов не только для учебы, но и для отдыха.</p>
+                </div>
+                <div class="info-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Biblioteka_Uniwersytecka_w_Warszawie_widok_z_ulicy_Dobrej.JPG/1200px-Biblioteka_Uniwersytecka_w_Warszawie_widok_z_ulicy_Dobrej.JPG');"></div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+            <section class="campus-section">
+                <h2 style="text-align: center; margin-bottom: 30px;">Карта Кампусов</h2>
+
+                <div class="campus-tabs">
+                    <button class="campus-btn active" onclick="openCampus('main')">Главный (Центр)</button>
+                    <button class="campus-btn" onclick="openCampus('ochota')">Охота (Наука)</button>
+                    <button class="campus-btn" onclick="openCampus('sluzew')">Служев (Бизнес)</button>
+                </div>
+
+                <div id="main" class="campus-content active">
+                    <div class="campus-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.4357288647734!2d21.01809631579667!3d52.2356133797615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x7230072110c1c80!2sUniversity%20of%20Warsaw!5e0!3m2!1sen!2spl!4v1625660000000!5m2!1sen!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="campus-info">
+                        <h3>Исторический Центр</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Сердце университета. Здесь находятся ректорат и старинные здания.</p>
+                        <ul class="campus-list">
+                            <li><span class="faculty-icon">🏛️</span> Главные ворота</li>
+                            <li><span class="faculty-icon">⚖️</span> Право и Администрация</li>
+                            <li><span class="faculty-icon">🌍</span> Политология и История</li>
+                        </ul>
+                        <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать схему (PDF)</a>
+                    </div>
+                </div>
+
+                <div id="ochota" class="campus-content">
+                    <div class="campus-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2444.6468305753063!2d20.98064431579598!3d52.21360097975735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc92697858d7%3A0x70d8a0c2045e1d3!2sWydzia%C5%82%20Fizyki%20Uniwersytetu%20Warszawskiego!5e0!3m2!1sen!2spl!4v1625660000000!5m2!1sen!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="campus-info">
+                        <h3>Кампус "Охота"</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Центр высоких технологий и точных наук.</p>
+                        <ul class="campus-list">
+                            <li><span class="faculty-icon">🧬</span> Биология и Химия</li>
+                            <li><span class="faculty-icon">💻</span> IT и Математика (MIM)</li>
+                            <li><span class="faculty-icon">⚛️</span> Физика</li>
+                        </ul>
+                        <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать схему (PDF)</a>
+                    </div>
+                </div>
+
+                <div id="sluzew" class="campus-content">
+                    <div class="campus-map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2446.994468641753!2d21.01831831579462!3d52.17094097974959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471932d0f3938451%3A0x2863702179632832!2sWydzia%C5%82%20Zarz%C4%85dzania%20Uniwersytetu%20Warszawskiego!5e0!3m2!1sen!2spl!4v1625660000000!5m2!1sen!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="campus-info">
+                        <h3>Кампус "Служев"</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Деловой центр на юге Варшавы.</p>
+                        <ul class="campus-list">
+                            <li><span class="faculty-icon">💼</span> Факультет Менеджмента</li>
+                            <li><span class="faculty-icon">📈</span> Финансы и Учет</li>
+                            <li><span class="faculty-icon">🏠</span> Общежития №5 и №7</li>
+                        </ul>
+                        <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать схему (PDF)</a>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+            <h2 style="margin-bottom: 30px; text-align: center;">Где живут студенты?</h2>
+            <div class="dorm-grid">
+                <div class="dorm-card">
+                    <div class="dorm-img" style="background-image: url('https://hotel-assistant.net/wp-content/uploads/2021/04/akademik-DS6.jpg');"></div>
+                    <div class="dorm-info">
+                        <h4>DS Radomska</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Самое новое общежитие. Блочная система (2 комнаты + санузел).</p>
+                        <span class="dorm-price">от 550 zł / мес</span>
+                    </div>
+                </div>
+                <div class="dorm-card">
+                    <div class="dorm-img" style="background-image: url('https://warsawnow.pl/wp-content/uploads/2020/09/akademik.jpg');"></div>
+                    <div class="dorm-info">
+                        <h4>DS Żwirki i Wigury</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Легендарный "Жвирек". Рядом с парком и медуниверситетом.</p>
+                        <span class="dorm-price">от 480 zł / мес</span>
+                    </div>
+                </div>
+                <div class="dorm-card">
+                    <div class="dorm-img" style="background-image: url('https://www.uw.edu.pl/wp-content/uploads/2016/06/akademik-smyczkowa.jpg');"></div>
+                    <div class="dorm-info">
+                        <h4>DS Smyczkowa</h4>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Уютное общежитие в тихом районе Mokotów.</p>
+                        <span class="dorm-price">от 510 zł / мес</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-bottom: 30px;">Документы для поступления</h2>
+            <div class="docs-grid">
+                <div class="doc-card"><span class="doc-icon">📄</span> Аттестат + Приложение</div>
+                <div class="doc-card"><span class="doc-icon">🔏</span> Апостиль (Обязательно)</div>
+                <div class="doc-card"><span class="doc-icon">🗣️</span> Сертификат польского (B1/B2)</div>
+                <div class="doc-card"><span class="doc-icon">⚕️</span> Медицинская справка</div>
+                <div class="doc-card"><span class="doc-icon">📸</span> Фото 35х45 мм</div>
+                <div class="doc-card"><span class="doc-icon">💰</span> Оплата рекрутац. сбора (85 zł)</div>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+            <h2 style="margin-bottom: 20px;">Стоимость и Направления</h2>
+            <div class="pricing-controls">
+                <button class="currency-btn active" onclick="setCurrency('EUR')">EUR (€)</button>
+                <button class="currency-btn" onclick="setCurrency('PLN')">PLN (zł)</button>
+                <button class="currency-btn" onclick="setCurrency('UAH')">UAH (₴)</button>
+            </div>
+
+            <table class="prices-table">
+                <thead>
+                <tr>
+                    <th>Факультет</th>
+                    <th>Язык</th>
+                    <th>Цена / год</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>Международные отношения</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="3000">3000 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Информатика (CS)</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="4200">4200 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Менеджмент</strong></td>
+                    <td>Польский</td>
+                    <td class="price-val" data-eur="2500">2500 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Психология</strong></td>
+                    <td>Польский</td>
+                    <td class="price-val" data-eur="3500">3500 €</td>
+                </tr>
+                <tr>
+                    <td><strong>Финансы и Бухгалтерия</strong></td>
+                    <td>Английский</td>
+                    <td class="price-val" data-eur="3300">3300 €</td>
+                </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: right;">*Цены ориентировочные.</p>
+
+        </div>
+    </div>
+
+    <section style="background: var(--color-red); color: white; padding: 80px 20px; text-align: center;">
+        <h2 style="color: white; margin-bottom: 20px;">Боишься не поступить?</h2>
+        <p style="max-width: 600px; margin: 0 auto 40px;">Конкурс в UW огромный. Мы поможем собрать документы идеально.</p>
+        <a href="contact.html" class="big-btn" style="background: white; color: var(--color-red);">Оценить шансы</a>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <h2>Поступим вместе</h2>
+        <a href="contact.html" class="big-btn">Оставить заявку</a>
+    </div>
+    <div class="copyright">© 2024 WU Admission.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            start: "top -50",
+            end: 99999,
+            toggleClass: { className: "scrolled", targets: "header" }
+        });
+
+        // Анимация появления
+        gsap.from(".info-block", {
+            y: 50, opacity: 0, duration: 0.8, stagger: 0.3, scrollTrigger: ".info-block"
+        });
+    });
+
+    // === ПЕРЕКЛЮЧЕНИЕ КАМПУСОВ ===
+    function openCampus(campusId) {
+        // Скрываем все блоки
+        document.querySelectorAll('.campus-content').forEach(el => el.classList.remove('active'));
+        // Снимаем класс active с кнопок
+        document.querySelectorAll('.campus-btn').forEach(el => el.classList.remove('active'));
+
+        // Показываем нужный блок и кнопку
+        document.getElementById(campusId).classList.add('active');
+        event.target.classList.add('active');
+    }
+
+    // === ВАЛЮТЫ ===
+    const RATES = { EUR: 1, PLN: 4.30, UAH: 42.50 };
+    const SYMBOLS = { EUR: '€', PLN: 'zł', UAH: '₴' };
+
+    function setCurrency(currency) {
+        document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        const prices = document.querySelectorAll('.price-val');
+        prices.forEach(price => {
+            const basePrice = parseFloat(price.getAttribute('data-eur'));
+            const newPrice = Math.round(basePrice * RATES[currency]);
+
+            gsap.to(price, {
+                duration: 0.2, opacity: 0,
+                onComplete: () => {
+                    price.innerText = `${newPrice} ${SYMBOLS[currency]}`;
+                    gsap.to(price, { duration: 0.2, opacity: 1 });
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMCS Люблин - Поступление</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="uni-page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.umcs.pl/gfx/umcs/userfiles/_public/aktualnosci/2019/1.jpg');">
+    <div style="z-index: 2;">
+      <img src="UMCS_rozsz_12G_PL_rgb.png" alt="UMCS Logo" class="uni-logo-large" style="padding: 10px; width: auto; max-width: 350px; border-radius: 20px;">
+      <h1 class="page-title-big" style="color: white; margin-bottom: 10px;">UMCS</h1>
+      <p style="font-size: 1.2rem; opacity: 0.9;">Uniwersytet Marii Curie-Skłodowskiej</p>
+    </div>
+  </section>
+
+  <div class="uni-stats-grid">
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">TOP 1</span>
+      <span class="uni-stat-label">В Восточной Польше</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">1944</span>
+      <span class="uni-stat-label">Год основания</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">20k+</span>
+      <span class="uni-stat-label">Студентов</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">Люблин</span>
+      <span class="uni-stat-label">Город вдохновения</span>
+    </div>
+  </div>
+
+  <div class="page-wrapper" style="padding-top: 0;">
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+      <div class="info-block">
+        <div class="info-text">
+          <h3>Лучший кампус Польши</h3>
+          <p>Главная фишка UMCS — уникальный "Miasteczko Akademickie". Это огромный парк в центре города, где расположены ВСЕ факультеты, общежития, клубы и спортзалы.</p>
+          <p>Вам не нужно ездить на транспорте. От общежития до лекции — 5 минут пешком через парк. Это создает невероятную атмосферу студенческого братства.</p>
+        </div>
+        <div class="info-img" style="background-image: url('https://www.umcs.pl/gfx/umcs/userfiles/_public/wspolpraca/biznes/fot._p._bobinski.jpg');"></div>
+      </div>
+
+      <div class="info-block reverse">
+        <div class="info-text">
+          <h3>Chatka Żaka</h3>
+          <p>Легендарный культурный центр прямо в кампусе. Концерты, кинопоказы, театральные студии — всё здесь.</p>
+          <p>Люблин дешевле Варшавы на 30-40%, но диплом UMCS ценится так же высоко. Идеальный старт для тех, кто хочет сэкономить бюджет, не теряя в качестве.</p>
+        </div>
+        <div class="info-img" style="background-image: url('https://kurierlubelski.pl/img/art/db/5e/14588509_0.jpg');"></div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <section class="campus-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">Центр событий</h2>
+
+        <div class="campus-tabs">
+          <button class="campus-btn active" onclick="openCampus('main')">Академгородок</button>
+          <button class="campus-btn" onclick="openCampus('eco')">Эко-Кампус</button>
+        </div>
+
+        <div id="main" class="campus-content active">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.669866299863!2d22.538562315760237!3d51.24357797959247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225766b8df8a7d%3A0x6280436279c784a!2sPlac%20Marii%20Curie-Sk%C5%82odowskiej%205%2C%2020-031%20Lublin!5e0!3m2!1spl!2spl!4v1625661234567!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Сердце Кампуса</h3>
+            <p style="color: #666; margin-bottom: 20px;">Площадь Марии Кюри. Здесь Ректорат, Юрфак, Экономика и главная библиотека.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">🎓</span> Ректорат</li>
+              <li><span class="faculty-icon">📚</span> Главная Библиотека</li>
+              <li><span class="faculty-icon">⚖️</span> Право и Администрация</li>
+            </ul>
+            <a href="mapa_umcs.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+          </div>
+        </div>
+
+        <div id="eco" class="campus-content">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2497.123456789012!2d22.520!3d51.250!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDE1JzAwLjAiTiAyMsKwMzEnMTIuMCJF!5e0!3m2!1spl!2spl!4v1625661234567!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Науки о Земле</h3>
+            <p style="color: #666; margin-bottom: 20px;">Факультет наук о Земле и благоустройства расположен чуть дальше, рядом с Ботаническим садом.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">🌍</span> География и Туризм</li>
+              <li><span class="faculty-icon">🌳</span> Ботанический сад</li>
+            </ul>
+            <a href="mapa_umcs.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <h2 style="margin-bottom: 30px; text-align: center;">Общежития UMCS</h2>
+      <div class="dorm-grid">
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://phavi.umcs.pl/at/attachments/2014/0729/102919-babilon.jpg');"></div>
+          <div class="dorm-info">
+            <h4>DS Babilon</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Знаменитый "небоскреб". Красивый вид на город, после ремонта.</p>
+            <span class="dorm-price">от 480 zł / мес</span>
+          </div>
+        </div>
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://phavi.umcs.pl/at/attachments/2014/0729/103151-femina.jpg');"></div>
+          <div class="dorm-info">
+            <h4>DS Femina</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Уютное общежитие коридорного типа. Очень дружная атмосфера.</p>
+            <span class="dorm-price">от 430 zł / мес</span>
+          </div>
+        </div>
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://phavi.umcs.pl/at/attachments/2014/0729/103433-ik.jpg');"></div>
+          <div class="dorm-info">
+            <h4>DS Ikar</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Блочная система (меньше людей на кухню). Рядом с ректоратом.</p>
+            <span class="dorm-price">от 510 zł / мес</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 20px;">Стоимость обучения (2024/25)</h2>
+      <div class="pricing-controls">
+        <button class="currency-btn active" onclick="setCurrency('EUR')">EUR (€)</button>
+        <button class="currency-btn" onclick="setCurrency('PLN')">PLN (zł)</button>
+        <button class="currency-btn" onclick="setCurrency('UAH')">UAH (₴)</button>
+      </div>
+
+      <table class="prices-table">
+        <thead>
+        <tr>
+          <th>Направление</th>
+          <th>Язык</th>
+          <th>Цена / год</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Международные отношения</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="1500">1500 €</td>
+        </tr>
+        <tr>
+          <td><strong>Информатика</strong></td>
+          <td>Английский</td>
+          <td class="price-val" data-eur="2500">2500 €</td>
+        </tr>
+        <tr>
+          <td><strong>Менеджмент</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="1300">1300 €</td>
+        </tr>
+        <tr>
+          <td><strong>Журналистика</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="1400">1400 €</td>
+        </tr>
+        <tr>
+          <td><strong>Графический дизайн (Искусство)</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="1800">1800 €</td>
+        </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: right;">*Цены ориентировочные.</p>
+
+    </div>
+  </div>
+
+  <section style="background: var(--color-red); color: white; padding: 80px 20px; text-align: center;">
+    <h2 style="color: white; margin-bottom: 20px;">Люблин - это комфорт</h2>
+    <p style="max-width: 600px; margin: 0 auto 40px;">Хочешь качественное образование, но дешевле, чем в столице? UMCS — твой выбор.</p>
+    <a href="contact.html" class="big-btn" style="background: white; color: var(--color-red);">Подать документы</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2>Поступим вместе</h2>
+    <a href="contact.html" class="big-btn">Оставить заявку</a>
+  </div>
+  <div class="copyright">© 2024 WU Admission.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      start: "top -50",
+      end: 99999,
+      toggleClass: { className: "scrolled", targets: "header" }
+    });
+    gsap.from(".info-block", {
+      y: 50, opacity: 0, duration: 0.8, stagger: 0.3, scrollTrigger: ".info-block"
+    });
+  });
+
+  // === ТАБЫ КАМПУСОВ ===
+  function openCampus(campusId) {
+    document.querySelectorAll('.campus-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.campus-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(campusId).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // === ВАЛЮТЫ ===
+  const RATES = { EUR: 1, PLN: 4.30, UAH: 42.50 };
+  const SYMBOLS = { EUR: '€', PLN: 'zł', UAH: '₴' };
+
+  function setCurrency(currency) {
+    document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    const prices = document.querySelectorAll('.price-val');
+    prices.forEach(price => {
+      const basePrice = parseFloat(price.getAttribute('data-eur'));
+      const newPrice = Math.round(basePrice * RATES[currency]);
+      gsap.to(price, {
+        duration: 0.2, opacity: 0,
+        onComplete: () => {
+          price.innerText = `${newPrice} ${SYMBOLS[currency]}`;
+          gsap.to(price, { duration: 0.2, opacity: 1 });
+        }
+      });
+    });
+  }
+</script>
+</body>
+</html>

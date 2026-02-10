@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ягеллонский Университет (UJ) - Краков</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="uni-page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Krakow_Rynek_Glowny_AB.jpg');">
+    <div style="z-index: 2;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Herb_Uniwersytetu_Jagiello%C5%84skiego.svg/1200px-Herb_Uniwersytetu_Jagiello%C5%84skiego.svg.png"
+           alt="UJ Logo"
+           class="uni-logo-large"
+           style="border-radius: 10px !important; width: auto !important; height: 160px !important; padding: 10px !important;"><h1 class="page-title-big" style="color: white; margin-bottom: 10px;">Uniwersytet Jagielloński </h1>
+    </div>
+  </section>
+
+  <div class="uni-stats-grid">
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">1364</span>
+      <span class="uni-stat-label">Год основания</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">#2</span>
+      <span class="uni-stat-label">В рейтинге Польши</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">40k+</span>
+      <span class="uni-stat-label">Студентов</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">Краков</span>
+      <span class="uni-stat-label">Культурная столица</span>
+    </div>
+  </div>
+
+  <div class="page-wrapper" style="padding-top: 0;">
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+      <div class="info-block">
+        <div class="info-text">
+          <h3>Старейший в Польше</h3>
+          <p>Основанный королем Казимиром Великим в 1364 году. Здесь учились Николай Коперник и Папа Римский Иоанн Павел II.</p>
+          <p>Это элитный классический университет. Если вы хотите изучать медицину, право, психологию или языки — вам сюда. Диплом UJ ценится работодателями как знак качества и интеллекта.</p>
+        </div>
+        <div class="info-img" style="background-image: url('https://krakow.pl/zalacznik/297298/3.jpg');"></div>
+      </div>
+
+      <div class="info-block reverse">
+        <div class="info-text">
+          <h3>Кампус 600-летия</h3>
+          <p>Несмотря на древнюю историю, UJ обладает одним из самых современных кампусов в Европе — "Кампус на Ручаю".</p>
+          <p>Здесь расположены факультеты биотехнологий, физики и математики. Здания оснащены лабораториями мирового уровня, а рядом ходит скоростной трамвай.</p>
+        </div>
+        <div class="info-img" style="background-image: url('https://ruj.uj.edu.pl/xmlui/bitstream/handle/item/275306/campus_600_lecia_odnowienia_uj_2016.jpg?sequence=1&isAllowed=y');"></div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <section class="campus-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">Карта Корпусов</h2>
+
+        <div class="campus-tabs">
+          <button class="campus-btn active" onclick="openCampus('oldtown')">Старый Город</button>
+          <button class="campus-btn" onclick="openCampus('ruczaj')">Кампус Ручай</button>
+          <button class="campus-btn" onclick="openCampus('medical')">Медицинский</button>
+        </div>
+
+        <div id="oldtown" class="campus-content active">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.274358826543!2d19.93121131571731!3d50.06268797942461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0d0870535d%3A0x62804595082f802!2sCollegium%20Novum%20Uniwersytetu%20Jagiello%C5%84skiego!5e0!3m2!1sru!2spl!4v1628173928123!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Исторический Центр</h3>
+            <p style="color: #666; margin-bottom: 20px;">Аудитории в зданиях XIII-XIX века.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">🏛️</span> Ректорат (Collegium Novum)</li>
+              <li><span class="faculty-icon">📜</span> Право и История</li>
+              <li><span class="faculty-icon">🎭</span> Филология</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="ruczaj" class="campus-content">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5125.61868512345!2d19.90644731517436!3d50.02758897941913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165c917637841f%3A0x863378950549419d!2sKampus%20600-lecia%20Odnawienia%20Uniwersytetu%20Jagiello%C5%84skiego!5e0!3m2!1sru!2spl!4v1628174000000!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Ручай (Кампус 600-летия)</h3>
+            <p style="color: #666; margin-bottom: 20px;">Научный городок будущего.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">🧬</span> Биотехнологии</li>
+              <li><span class="faculty-icon">🔭</span> Физика и Астрономия</li>
+              <li><span class="faculty-icon">💻</span> Математика и Информатика</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="medical" class="campus-content">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.467891234567!2d19.9543!3d50.0456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAzJzM0LjIiTiAxOcKwNTcnMTUuNSJF!5e0!3m2!1sru!2spl!4v1628174100000!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Collegium Medicum</h3>
+            <p style="color: #666; margin-bottom: 20px;">Один из сильнейших медицинских центров Европы.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">⚕️</span> Лечебное дело</li>
+              <li><span class="faculty-icon">🦷</span> Стоматология</li>
+              <li><span class="faculty-icon">💊</span> Фармацевтика</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <h2 style="margin-bottom: 30px; text-align: center;">Легендарные общежития</h2>
+      <div class="dorm-grid">
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://bratniak.uj.edu.pl/documents/139364584/141065750/Zaczek.jpg');"></div>
+          <div class="dorm-info">
+            <h4>DS Żaczek</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Самое известное общежитие. Центр студенческой жизни, рядом с главным парком.</p>
+            <span class="dorm-price">от 580 zł / мес</span>
+          </div>
+        </div>
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://bratniak.uj.edu.pl/documents/139364584/141065750/Nawojka.jpg');"></div>
+          <div class="dorm-info">
+            <h4>DS Nawojka</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Находится рядом с "Жачеком". Комфортные комнаты после ремонта.</p>
+            <span class="dorm-price">от 520 zł / мес</span>
+          </div>
+        </div>
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://d-art.ppstatic.pl/kadry/k/r/1/8b/56/6331a9c3d4e68_o_medium.jpg');"></div>
+          <div class="dorm-info">
+            <h4>DS Bydgoska</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Бюджетный вариант в спокойном районе. Хороший доезд до центра.</p>
+            <span class="dorm-price">от 460 zł / мес</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 20px;">Стоимость обучения (2024/25)</h2>
+      <div class="pricing-controls">
+        <button class="currency-btn active" onclick="setCurrency('EUR')">EUR (€)</button>
+        <button class="currency-btn" onclick="setCurrency('PLN')">PLN (zł)</button>
+        <button class="currency-btn" onclick="setCurrency('UAH')">UAH (₴)</button>
+      </div>
+
+      <table class="prices-table">
+        <thead>
+        <tr>
+          <th>Факультет</th>
+          <th>Язык</th>
+          <th>Цена / год</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Лечебное дело (Медицина)</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="9000">9000 €</td>
+        </tr>
+        <tr>
+          <td><strong>Право (Prawo)</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="2800">2800 €</td>
+        </tr>
+        <tr>
+          <td><strong>Психология</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="3500">3500 €</td>
+        </tr>
+        <tr>
+          <td><strong>Журналистика</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="2400">2400 €</td>
+        </tr>
+        <tr>
+          <td><strong>International Management</strong></td>
+          <td>Английский</td>
+          <td class="price-val" data-eur="4000">4000 €</td>
+        </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: right;">*Цены ориентировочные.</p>
+
+    </div>
+  </div>
+
+  <section style="background: var(--color-red); color: white; padding: 80px 20px; text-align: center;">
+    <h2 style="color: white; margin-bottom: 20px;">Краков ждет тебя!</h2>
+    <p style="max-width: 600px; margin: 0 auto 40px;">Поступить в UJ сложно, но реально. Мы знаем, как подготовить документы.</p>
+    <a href="contact.html" class="big-btn" style="background: white; color: var(--color-red);">Подать заявку</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2>Поступим вместе</h2>
+    <a href="contact.html" class="big-btn">Оставить заявку</a>
+  </div>
+  <div class="copyright">© 2024 WU Admission.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      start: "top -50",
+      end: 99999,
+      toggleClass: { className: "scrolled", targets: "header" }
+    });
+    gsap.from(".info-block", {
+      y: 50, opacity: 0, duration: 0.8, stagger: 0.3, scrollTrigger: ".info-block"
+    });
+  });
+
+  // === ТАБЫ КАМПУСОВ ===
+  function openCampus(campusId) {
+    document.querySelectorAll('.campus-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.campus-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(campusId).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // === ВАЛЮТЫ ===
+  const RATES = { EUR: 1, PLN: 4.30, UAH: 42.50 };
+  const SYMBOLS = { EUR: '€', PLN: 'zł', UAH: '₴' };
+
+  function setCurrency(currency) {
+    document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    const prices = document.querySelectorAll('.price-val');
+    prices.forEach(price => {
+      const basePrice = parseFloat(price.getAttribute('data-eur'));
+      const newPrice = Math.round(basePrice * RATES[currency]);
+      gsap.to(price, {
+        duration: 0.2, opacity: 0,
+        onComplete: () => {
+          price.innerText = `${newPrice} ${SYMBOLS[currency]}`;
+          gsap.to(price, { duration: 0.2, opacity: 1 });
+        }
+      });
+    });
+  }
+</script>
+</body>
+</html>

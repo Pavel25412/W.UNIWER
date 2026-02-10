@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGH Краков - Технологии будущего</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="uni-page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)) ;">
+    <div style="z-index: 2;">
+      <img src="agh_znk_wbr_rgb_150ppi.png" alt="AGH Logo" class="uni-logo-large" style="padding: 20px; width: auto; max-width: 200px;">
+      <h1 class="page-title-big" style="color: white; margin-bottom: 10px;">Akademia Górno-Hutnicza</h1>
+    </div>
+  </section>
+
+  <div class="uni-stats-grid">
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">TOP 2</span>
+      <span class="uni-stat-label">В IT рейтинге</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">1919</span>
+      <span class="uni-stat-label">Год основания</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">9000</span>
+      <span class="uni-stat-label">Мест в общагах</span>
+    </div>
+    <div class="uni-stat-item">
+      <span class="uni-stat-val">Краков</span>
+      <span class="uni-stat-label">Сердце технологий</span>
+    </div>
+  </div>
+
+  <div class="page-wrapper" style="padding-top: 0;">
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+      <div class="info-block">
+        <div class="info-text">
+          <h3>Кузница инженеров</h3>
+          <p>AGH — это бренд. Диплом этого ВУЗа открывает двери в Tesla, NASA, Google и CERN. Здесь самый мощный суперкомпьютер в Польше "Prometheus".</p>
+          <p>ВУЗ специализируется на IT, робототехнике, геологии и новой энергетике. Это выбор для тех, кто дружит с математикой.</p>
+        </div>
+        <div class="info-img" style="background-image: url('https://www.agh.edu.pl/fileadmin/_processed_/5/a/csm_AGH_A-0_8c6c5a2c4e.jpg');"></div>
+      </div>
+
+      <div class="info-block reverse">
+        <div class="info-text">
+          <h3>Miasteczko AGH</h3>
+          <p>Легендарный студенческий городок. Это "государство в государстве" с собственными законами, радиостанцией, клубами и даже бассейном.</p>
+          <p>Именно здесь проходит самый масштабный студенческий фестиваль Польши — Juwenalia Krakowskie.</p>
+        </div>
+        <div class="info-img" style="background-image: url('https://lovekrakow.pl/images/actual/big/miasteczko-studenckie-agh_1597920138.jpg');"></div>
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <section class="campus-section">
+        <h2 style="text-align: center; margin-bottom: 30px;">Кампус AGH</h2>
+
+        <div class="campus-tabs">
+          <button class="campus-btn active" onclick="openCampus('main')">Главный корпус</button>
+          <button class="campus-btn" onclick="openCampus('miasteczko')">Miasteczko (Общаги)</button>
+        </div>
+
+        <div id="main" class="campus-content active">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.4746649726227!2d19.921!3d50.066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b060d57e849%3A0x64366606554558e0!2sAGH%20University%20of%20Science%20and%20Technology!5e0!3m2!1spl!2spl!4v1625661234567!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Главный корпус (A-0)</h3>
+            <p style="color: #666; margin-bottom: 20px;">Монументальное здание на аллее Мицкевича. Символ технического могущества.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">🏛️</span> Ректорат</li>
+              <li><span class="faculty-icon">⛏️</span> Горный факультет</li>
+              <li><span class="faculty-icon">🗿</span> Памятник шахтерам</li>
+            </ul>
+            <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+          </div>
+        </div>
+
+        <div id="miasteczko" class="campus-content">
+          <div class="campus-map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.0!2d19.905!3d50.068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTAwMDA!5e0!3m2!1spl!2spl!4v1625661234567!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="campus-info">
+            <h3>Miasteczko Studenckie</h3>
+            <p style="color: #666; margin-bottom: 20px;">Самая большая концентрация студентов в Европе.</p>
+            <ul class="campus-list">
+              <li><span class="faculty-icon">🏢</span> 20 общежитий</li>
+              <li><span class="faculty-icon">🍻</span> Клуб "Studio"</li>
+              <li><span class="faculty-icon">🏊</span> Бассейн AGH</li>
+            </ul>
+            <a href="map.pdf" target="_blank" class="pdf-btn">📄 Скачать карту (PDF)</a>
+          </div>
+        </div>
+      </section>
+
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <h2 style="margin-bottom: 30px; text-align: center;">Общежития AGH</h2>
+      <div class="dorm-grid">
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('');"></div>
+          <div class="dorm-info">
+            <h4>DS Olimp</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Самое высокое здание городка. Вид на весь Краков.</p>
+            <span class="dorm-price">от 450 zł / мес</span>
+          </div>
+        </div>
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/247165039.jpg?k=324e930906a54388e4040d6c0b3969e6b3671a52e0040775d733475d4b4764b8&o=&hp=1');"></div>
+          <div class="dorm-info">
+            <h4>DS Kapitol</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Стандартное общежитие коридорного типа. Эпицентр вечеринок.</p>
+            <span class="dorm-price">от 415 zł / мес</span>
+          </div>
+        </div>
+        <div class="dorm-card">
+          <div class="dorm-img" style="background-image: url('https://lh3.googleusercontent.com/proxy/...');"></div>
+          <div class="dorm-info">
+            <h4>DS Alfa</h4>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Бюджетный вариант. Рядом со столовой и супермаркетом.</p>
+            <span class="dorm-price">от 400 zł / мес</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 20px;">Стоимость обучения (2024/25)</h2>
+      <div class="pricing-controls">
+        <button class="currency-btn active" onclick="setCurrency('EUR')">EUR (€)</button>
+        <button class="currency-btn" onclick="setCurrency('PLN')">PLN (zł)</button>
+        <button class="currency-btn" onclick="setCurrency('UAH')">UAH (₴)</button>
+      </div>
+
+      <table class="prices-table">
+        <thead>
+        <tr>
+          <th>Направление</th>
+          <th>Язык</th>
+          <th>Цена / год</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Computer Science (IT)</strong></td>
+          <td>Английский</td>
+          <td class="price-val" data-eur="4200">4200 €</td>
+        </tr>
+        <tr>
+          <td><strong>Информатика</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="2800">2800 €</td>
+        </tr>
+        <tr>
+          <td><strong>Электроника и Телекоммуникации</strong></td>
+          <td>Английский</td>
+          <td class="price-val" data-eur="3500">3500 €</td>
+        </tr>
+        <tr>
+          <td><strong>Управление (Management)</strong></td>
+          <td>Польский</td>
+          <td class="price-val" data-eur="1800">1800 €</td>
+        </tr>
+        <tr>
+          <td><strong>Мехатроника</strong></td>
+          <td>Английский</td>
+          <td class="price-val" data-eur="3000">3000 €</td>
+        </tr>
+        </tbody>
+      </table>
+      <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: right;">*Цены ориентировочные.</p>
+
+    </div>
+  </div>
+
+  <section style="background: var(--color-red); color: white; padding: 80px 20px; text-align: center;">
+    <h2 style="color: white; margin-bottom: 20px;">Стань инженером будущего</h2>
+    <p style="max-width: 600px; margin: 0 auto 40px;">AGH — это сложно, но перспективно. Мы поможем с поступлением и адаптацией.</p>
+    <a href="contact.html" class="big-btn" style="background: white; color: var(--color-red);">Начать поступление</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2>Поступим вместе</h2>
+    <a href="contact.html" class="big-btn">Оставить заявку</a>
+  </div>
+  <div class="copyright">© 2024 WU Admission.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      start: "top -50",
+      end: 99999,
+      toggleClass: { className: "scrolled", targets: "header" }
+    });
+    gsap.from(".info-block", {
+      y: 50, opacity: 0, duration: 0.8, stagger: 0.3, scrollTrigger: ".info-block"
+    });
+  });
+
+  // === ТАБЫ КАМПУСОВ ===
+  function openCampus(campusId) {
+    document.querySelectorAll('.campus-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.campus-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(campusId).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // === ВАЛЮТЫ ===
+  const RATES = { EUR: 1, PLN: 4.30, UAH: 42.50 };
+  const SYMBOLS = { EUR: '€', PLN: 'zł', UAH: '₴' };
+
+  function setCurrency(currency) {
+    document.querySelectorAll('.currency-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    const prices = document.querySelectorAll('.price-val');
+    prices.forEach(price => {
+      const basePrice = parseFloat(price.getAttribute('data-eur'));
+      const newPrice = Math.round(basePrice * RATES[currency]);
+      gsap.to(price, {
+        duration: 0.2, opacity: 0,
+        onComplete: () => {
+          price.innerText = `${newPrice} ${SYMBOLS[currency]}`;
+          gsap.to(price, { duration: 0.2, opacity: 1 });
+        }
+      });
+    });
+  }
+</script>
+</body>
+</html>
