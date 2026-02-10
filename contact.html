@@ -3,65 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WU - Контакты</title>
+  <title>Контакты - WU Admission</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="logo.png" alt="WU Logo" class="logo-img">
+  <a href="index.html" class="logo-container">
+    <div class="logo-box">WU</div>
+    <span class="logo-text">W.Uniwer</span>
   </a>
   <nav>
     <a href="index.html">Главная</a>
     <a href="services.html">Услуги</a>
     <a href="contact.html" class="active">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
   </nav>
 </header>
 
-<main class="page-container">
-  <div class="page-title">
-    <h1>Свяжитесь с нами</h1>
-    <div class="line"></div>
-  </div>
+<div class="success-message" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; backdrop-filter: blur(5px);">
+  <div style="font-size: 5rem; color: #D64640; margin-bottom: 20px; text-shadow: 0 0 20px rgba(214, 70, 64, 0.5);">✓</div>
+  <h2 style="font-family: 'Montserrat', sans-serif; font-size: 3rem; margin-bottom: 10px;">ЗАЯВКА ОТПРАВЛЕНА!</h2>
+  <p style="font-family: 'Inter', sans-serif; font-size: 1.2rem; opacity: 0.9; max-width: 400px; line-height: 1.5;">Проверь свою почту, мы отправили подтверждение. Менеджер свяжется с тобой скоро.</p>
+  <button onclick="closeSuccess()" class="nav-btn" style="font-family: Inter, sans-serif; background: white; color: black; border: none; cursor: pointer; padding: 15px 40px; font-weight: 700;">Отлично</button>
+</div>
 
-  <div class="contact-wrapper">
-    <div class="contact-info">
-      <h3>Наши контакты</h3>
-      <p>Мы всегда рады ответить на ваши вопросы. Напишите нам, и мы подберем удобное время для консультации.</p>
-      <br>
-      <p><strong>Email:</strong> contact@wu-poland.com</p>
-      <p><strong>Телефон:</strong> +48 123 456 789</p>
-      <p><strong>Адрес:</strong> Варшава, Польша (офис онлайн)</p>
+<main class="page-wrapper">
+
+  <div class="contact-layout">
+    <div class="contact-info-large">
+      <h2>ДАВАЙ <br><span class="text-red">ОБСУДИМ</span> <br>ТВОЕ БУДУЩЕЕ</h2>
+      <p style="margin-bottom: 40px; color: #555; max-width: 400px;">
+        Заполни форму справа, и данные придут нам на почту моментально. Мы работаем онлайн по всей Европе.
+      </p>
+
+      <a href="mailto:hello@wu-admission.pl" class="contact-detail">hello@wu-admission.pl</a>
+      <a href="tel:+48123456789" class="contact-detail">+48 123 456 789</a>
+      <div class="contact-detail" style="font-size: 1rem; margin-top: 30px; font-weight: 700;">
+        📍 Варшава, ул. Маршалковска 100
+      </div>
     </div>
 
-    <div class="contact-form">
-      <form action="https://script.google.com/macros/s/AKfycbxOGt5ADtnmbVXPkNcu6a0KY72D1boTbwKTdKDS58yhZwqSeyPY3M8rgEaAkFKcUd7W/exec" method="POST">
+    <div class="contact-form-wrapper">
+      <form id="emailForm" class="modern-form">
+        <h3 style="margin-bottom: 20px;">Заявка на консультацию</h3>
+
+        <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_template" value="table"> <input type="hidden" name="_subject" value="🔥 Новая заявка с сайта WU!">
 
         <div class="form-group">
-          <label>Ваше имя</label>
+          <label>Как тебя зовут?</label>
           <input type="text" name="name" placeholder="Иван Иванов" required>
         </div>
 
         <div class="form-group">
-          <label>Email для связи</label>
-          <input type="email" name="email" placeholder="example@mail.com" required>
+          <label>Твой Email или Телефон</label>
+          <input type="text" name="contact" placeholder="email@example.com" required>
         </div>
 
         <div class="form-group">
-          <label>Сообщение</label>
-          <textarea name="message" rows="5" placeholder="Я хочу поступить..." required></textarea>
+          <label>Твой вопрос</label>
+          <textarea name="message" rows="4" placeholder="Хочу поступить..." required></textarea>
         </div>
 
-        <button type="submit" class="btn" style="width: 100%;">Отправить в таблицу</button>
+        <button type="submit" class="big-btn" id="submitBtn" style="border: none; cursor: pointer; width: 100%;">Отправить заявку</button>
+        <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: center;">Нажимая кнопку, вы соглашаетесь с обработкой данных.</p>
       </form>
     </div>
   </div>
+
+  <section class="faq-section">
+    <h2 style="text-align: center; margin-bottom: 40px;">Частые вопросы</h2>
+    <div class="faq-item">
+      <div class="faq-q">Когда нужно начинать готовиться?</div>
+      <div class="faq-a">Идеально — за год до поступления.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Гарантируете ли вы визу?</div>
+      <div class="faq-a">Мы гарантируем правильность документов, что дает 98% успеха.</div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
-  <p>&copy; 2023 WU Admission. Все права защищены.</p>
+  <div class="copyright" style="margin-top: 0;">
+    &copy; 2024 WU Admission. Designed with ❤️.
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+  const EMAIL_TO = 'lolkadoshirak@gmail.com';
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Логика хедера
+    ScrollTrigger.create({
+      start: "top -50",
+      end: 99999,
+      toggleClass: { className: "scrolled", targets: "header" }
+    });
+
+    // --- ОТПРАВКА ФОРМЫ ---
+    const form = document.getElementById('emailForm');
+    const successMsg = document.querySelector('.success-message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Не перезагружаем страницу
+
+      const btn = document.getElementById('submitBtn');
+      const originalText = btn.innerText;
+
+      btn.innerText = 'Отправляем...';
+      btn.style.opacity = '0.7';
+      btn.disabled = true;
+
+      // Отправляем данные на сервис FormSubmit
+      fetch(`https://formsubmit.co/ajax/${EMAIL_TO}`, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+              .then(response => response.json())
+              .then(data => {
+                form.reset();
+                showSuccess();
+              })
+              .catch(error => {
+                console.log(error);
+                alert('Что-то пошло не так. Попробуйте позже.');
+              })
+              .finally(() => {
+                btn.innerText = originalText;
+                btn.style.opacity = '1';
+                btn.disabled = false;
+              });
+    });
+  });
+
+  // --- ФУНКЦИИ АНИМАЦИИ (GSAP) ---
+  function showSuccess() {
+    const msg = document.querySelector('.success-message');
+    msg.style.display = 'flex';
+    
+    gsap.fromTo(".success-message > *",
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)" }
+    );
+  }
+
+  function closeSuccess() {
+    gsap.to(".success-message", {
+      opacity: 0,
+      duration: 0.3,
+      onComplete: () => {
+        document.querySelector('.success-message').style.display = 'none';
+        document.querySelector('.success-message').style.opacity = '1'; // Сброс для след. раза
+      }
+    });
+  }
+</script>
 </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Полицеальные школы - Бесплатное обучение</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="vip-page">
+
+<header>
+  <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="school-hero">
+    <h1 class="page-title-big">БЕСПЛАТНОЕ <br>ОБРАЗОВАНИЕ</h1>
+    <p class="page-subtitle" style="color: white;">
+      Уже закончил школу? Получи профессию в Европе бесплатно. Идеальный вариант для взрослых, чтобы переехать и получить ВНЖ.
+    </p>
+    <a href="contact.html" class="big-btn" style="margin-top: 40px; color: #11998e;">Записаться (150€)</a>
+  </section>
+
+  <section class="features-grid-simple">
+    <div class="feature-simple">
+      <div class="feature-icon-circle">🆓</div>
+      <h3>Это бесплатно?</h3>
+      <p>Да. Обучение спонсируется государством или фондами ЕС. Вы платите только за наше сопровождение при поступлении.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">💼</div>
+      <h3>Популярные профессии</h3>
+      <p>IT-информатика, Косметология, Флористика, Ветеринария, Ассистент стоматолога, Массажист.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">📄</div>
+      <h3>Основание для ВНЖ</h3>
+      <p>Учеба в полицеальной школе является официальным основанием для получения Карты Побыту.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">❌</div>
+      <h3>Без экзаменов</h3>
+      <p>Никаких ЕГЭ или ЗНО. Зачисление происходит в порядке очереди подачи документов. Мы займем место первыми.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2>Получи профессию</h2>
+    <a href="contact.html" class="big-btn">Занять место</a>
+  </div>
+  <div class="copyright">&copy; 2024 WU Admission.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof gsap !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.create({ start: "top -50", end: 99999, toggleClass: { className: "scrolled", targets: "header" } });
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВНЖ (Карта Побыту) - Легализация в Польше</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-container">
+        <div class="logo-box">WU</div>
+        <span class="logo-text">W.Uniwer</span>
+    </a>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contact.html">Контакты</a>
+        <a href="contact.html" class="nav-btn">Подать заявку</a>
+    </nav>
+</header>
+
+<main>
+    <section class="legal-hero">
+        <div style="background: #eef2ff; color: #4f46e5; padding: 5px 15px; border-radius: 20px; display: inline-block; font-weight: 700; font-size: 0.9rem; margin-bottom: 20px;">Юридическое сопровождение</div>
+        <h1 class="page-title-big">ПОЛУЧЕНИЕ <br><span class="text-red">КАРТЫ ПОБЫТУ</span></h1>
+        <p class="page-subtitle">Временный Вид на Жительство (Karta Czasowego Pobytu) на основании учебы. Полное ведение дела: от сбора бумаг до получения пластика.</p>
+    </section>
+
+    <section style="padding: 0 20px 100px;">
+        <div class="doc-list">
+            <h2 style="text-align: center; margin-bottom: 40px;">Что мы подготовим за вас:</h2>
+
+            <div class="doc-item">
+                <div class="check-circle">✓</div>
+                <div>
+                    <strong>Заполнение Wniosek</strong>
+                    <p style="margin:0; font-size: 0.9rem; color: #666;">Заполняем анкету на польском языке без ошибок (одна ошибка может стоить отказа).</p>
+                </div>
+            </div>
+
+            <div class="doc-item">
+                <div class="check-circle">✓</div>
+                <div>
+                    <strong>Страховка (Ubezpieczenie)</strong>
+                    <p style="margin:0; font-size: 0.9rem; color: #666;">Помогаем оформить полис, который принимает Ужонд (ZUS или частная).</p>
+                </div>
+            </div>
+
+            <div class="doc-item">
+                <div class="check-circle">✓</div>
+                <div>
+                    <strong>Załącznik nr 1</strong>
+                    <p style="margin:0; font-size: 0.9rem; color: #666;">Получаем правильное приложение от университета о том, что вы студент.</p>
+                </div>
+            </div>
+
+            <div class="doc-item">
+                <div class="check-circle">✓</div>
+                <div>
+                    <strong>Подтверждение финансов</strong>
+                    <p style="margin:0; font-size: 0.9rem; color: #666;">Рассказываем, сколько денег должно быть на счету и как взять справку.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="process-section">
+        <h2 class="section-title" style="color: white; text-align: center;">Этапы <span class="text-red">Легализации</span></h2>
+        <div class="timeline-container" style="margin-top: 60px;">
+            <div class="timeline-item">
+                <span class="step-num">Этап 1</span>
+                <h3>Анализ и отправка</h3>
+                <p style="color: #aaa;">Проверяем ваш паспорт и статус. Отправляем документы почтой (List Polecony), чтобы легализовать ваше пребывание сразу (Штамп).</p>
+            </div>
+            <div class="timeline-item">
+                <span class="step-num">Этап 2</span>
+                <h3>Сдача отпечатков</h3>
+                <p style="color: #aaa;">Ждем вызова из Ужонда. Мы идем с вами на сдачу отпечатков пальцев, чтобы помочь с переводом.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="step-num">Этап 3</span>
+                <h3>Децизия и Пластик</h3>
+                <p style="color: #aaa;">Инспектор проверяет дело. Получаем позитивное решение (Decyzja), платим сбор за карту и забираем ваш ВНЖ.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="contact.html" class="big-btn">Начать процесс (250€)</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="copyright" style="margin-top: 0;">
+        &copy; 2024 WU Admission. Legal Department.
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            start: "top -50",
+            end: 99999,
+            toggleClass: { className: "scrolled", targets: "header" }
+        });
+        gsap.from(".doc-item", {
+            x: -50, opacity: 0, duration: 0.6, stagger: 0.2, scrollTrigger: ".doc-list"
+        });
+    });
+</script>
+</body>
+</html>

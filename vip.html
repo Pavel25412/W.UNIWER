@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Менторство - Личный куратор в Польше</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="vip-page" style="background-color: #000; color: white;">
+
+<header>
+    <a href="index.html" class="logo-container">
+        <div class="logo-box">WU</div>
+        <span class="logo-text">W.Uniwer</span>
+    </a>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contact.html">Контакты</a>
+        <a href="contact.html" class="nav-btn">Подать заявку</a>
+    </nav>
+</header>
+
+<main>
+    <section class="vip-hero">
+        <span style="color: #BF953F; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;">Premium Service</span>
+        <h1 style="font-size: 4rem; margin: 20px 0;">ЛИЧНЫЙ <span class="text-gold">МЕНТОР</span><br>В ВАРШАВЕ</h1>
+        <p style="max-width: 600px; margin: 0 auto 40px; color: #ccc; font-size: 1.2rem;">
+            Для тех, кто ценит свое время и комфорт. Мы встретим, заселим и решим любую бытовую проблему, пока вы наслаждаетесь кофе.
+        </p>
+        <a href="contact.html" class="big-btn" style="background: #BF953F; color: black; border: none;">Заказать VIP (990€)</a>
+    </section>
+
+    <section class="vip-features">
+        <div class="vip-feature-card">
+            <span style="font-size: 3rem;">🚗</span>
+            <h3>Встреча на авто</h3>
+            <p>Личный водитель встретит вас в аэропорту или на вокзале. Поможем с багажом, дадим сим-карту с интернетом сразу по прилету.</p>
+        </div>
+
+        <div class="vip-feature-card">
+            <span style="font-size: 3rem;">💎</span>
+            <h3>Квартира мечты</h3>
+            <p>Мы не ищем общежития. Мы подбираем квартиры высокого стандарта. Проверка договора юристом включена.</p>
+        </div>
+
+        <div class="vip-feature-card">
+            <span style="font-size: 3rem;">🏦</span>
+            <h3>Банк и PESEL</h3>
+            <p>Без очередей. Записываем вас в ужонд и банк заранее. Сопровождаем за руку к окошку. Получение кода PESEL за 1 день.</p>
+        </div>
+
+        <div class="vip-feature-card">
+            <span style="font-size: 3rem;">🏥</span>
+            <h3>Медицина VIP</h3>
+            <p>Оформление расширенной страховки. Запись к врачам (включая русскоязычных) без ожидания месяцев.</p>
+        </div>
+
+        <div class="vip-feature-card">
+            <span style="font-size: 3rem;">🛍️</span>
+            <h3>Шоппинг-тур</h3>
+            <p>Покажем лучшие ТЦ, поможем закупить всё для дома (от подушек до посуды). Организуем доставку.</p>
+        </div>
+
+        <div class="vip-feature-card">
+            <span style="font-size: 3rem;">🦁</span>
+            <h3>24/7 Поддержка</h3>
+            <p>Личный чат с куратором в WhatsApp/Telegram. Ответ в течение 5 минут. Решаем даже вопросы "где поесть суши ночью".</p>
+        </div>
+    </section>
+
+</main>
+
+<footer style="background: #111; border-top: 1px solid #333;">
+    <div class="footer-content">
+        <h2>Ощути комфорт</h2>
+        <p style="color: #777;">Количество VIP-мест ограничено (берем только 5 человек в месяц).</p>
+        <a href="contact.html" class="big-btn" style="background: white; color: black; margin-top: 20px;">Забронировать место</a>
+    </div>
+    <div class="copyright" style="color: #555;">
+        &copy; 2024 WU Admission. Premium Division.
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Анимация хедера (Стекло)
+            ScrollTrigger.create({
+                start: "top -50",
+                end: 99999,
+                toggleClass: { className: "scrolled", targets: "header" }
+            });
+        }
+    });
+</script>
+</body>
+</html>
