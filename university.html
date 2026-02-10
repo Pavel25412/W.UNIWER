@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ВУЗ Под Ключ - Поступление в Польшу</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="vip-page"> <header>
+  <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="uni-hero">
+    <div class="uni-badge">ХИТ ПРОДАЖ</div>
+    <h1 class="page-title-big">ГАРАНТИЯ <br>ПОСТУПЛЕНИЯ</h1>
+    <p class="page-subtitle" style="color: rgba(255,255,255,0.9);">
+      Мы не просто подаем документы. Мы разрабатываем стратегию, которая гарантирует тебе место в университете или вернем деньги.
+    </p>
+    <a href="contact.html" class="big-btn" style="margin-top: 40px;">Хочу поступить (590€)</a>
+  </section>
+
+  <section class="features-grid-simple">
+    <div class="feature-simple">
+      <div class="feature-icon-circle">🎯</div>
+      <h3>Стратегия 5 ВУЗов</h3>
+      <p>Мы подбираем 1 основной ВУЗ и 4 запасных. Это математически сводит риск непоступления к нулю.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">📑</div>
+      <h3>Полная бюрократия</h3>
+      <p>Присяжные переводы, апостиль, легализация, электронные регистрации (IRK/ERK) — мы делаем всё за тебя.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">🏠</div>
+      <h3>Общежитие</h3>
+      <p>Мест в общежитиях мало. Мы знаем, когда открывается система бронирования, и "выхватываем" лучшее место.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">🛂</div>
+      <h3>Виза без стресса</h3>
+      <p>Заполняем анкету, проверяем страховку и готовим вас к вопросам консула, чтобы не получить отказ.</p>
+    </div>
+  </section>
+
+  <section class="universities-section" style="height: auto; background: #111; padding: 100px 0;">
+    <h2 style="color: white; text-align: center; margin-bottom: 50px;">Куда мы поступаем?</h2>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 0 20px;">
+      <div class="uni-card" style="width: 300px;"><div class="uni-img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/Brama_G%C5%82%C3%B3wna_UW.jpg'); height: 200px;"></div><h3 style="color: white;">Варшавский</h3></div>
+      <div class="uni-card" style="width: 300px;"><div class="uni-img" style="background-image: url('https://krakow.pl/zalacznik/297298/3.jpg'); height: 200px;"></div><h3 style="color: white;">Ягеллонский</h3></div>
+      <div class="uni-card" style="width: 300px;"><div class="uni-img" style="background-image: url('https://pwr.edu.pl/fcp/aGBUKOQtTKlQhbx08SlkATxYCEi8pMgQGS39YWRxpR1ZpCFghQXRa/1/public/news_2020/2020_05/bud_a1_pwr.jpg'); height: 200px;"></div><h3 style="color: white;">Вроцлавский</h3></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2>Поступим вместе?</h2>
+    <a href="contact.html" class="big-btn">Начать процесс</a>
+  </div>
+  <div class="copyright">&copy; 2024 WU Admission.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof gsap !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.create({
+        start: "top -50", end: 99999, toggleClass: { className: "scrolled", targets: "header" }
+      });
+    }
+  });
+</script>
+</body>
+</html>

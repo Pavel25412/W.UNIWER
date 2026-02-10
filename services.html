@@ -3,64 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WU - Наши услуги</title>
+    <title>Услуги и Цены - WU Admission</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <a href="index.html">
-        <img src="logo.png" alt="WU Logo" class="logo-img">
+    <a href="index.html" class="logo-container">
+        <div class="logo-box">WU</div>
+        <span class="logo-text">W.Uniwer</span>
     </a>
     <nav>
         <a href="index.html">Главная</a>
         <a href="services.html" class="active">Услуги</a>
         <a href="contact.html">Контакты</a>
+        <a href="contact.html" class="nav-btn">Подать заявку</a>
     </nav>
 </header>
 
-<main class="page-container">
-    <div class="page-title">
-        <h1>Что мы предлагаем</h1>
-        <div class="line"></div>
+<main>
+    <div class="page-wrapper">
+        <section class="page-header">
+            <h1 class="page-title-big">ТВОЙ ПУТЬ <br><span class="text-red">К ЕВРОПЕЙСКОМУ</span> ДИПЛОМУ</h1>
+            <p class="page-subtitle">Мы берем на себя всю бюрократию. Ты готовишься к учебе, мы готовим документы. Выбери пакет услуг, который подходит именно тебе.</p>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-title-wrapper">
+                <h2 class="section-title">Выбери свой <span class="text-red">Старт</span></h2>
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-card is-hit" style="border-color: var(--color-red); box-shadow: 0 15px 40px rgba(214, 70, 64, 0.1);">
+
+                    <div class="hit-label">Хит продаж</div>
+
+                    <div class="card-visible">
+                        <span class="card-icon" style="background: var(--color-red); color: white;">🎓</span>
+                        <h3>ВУЗ "Под Ключ"</h3>
+                        <p class="short-desc">Самый популярный выбор. Полное сопровождение от выбора стратегии до заселения в общежитие.</p>
+                        <span class="price-tag" style="background: var(--color-red);">590 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li><strong>Всё из пакета "Базовый"</strong></li>
+                            <li>Подбор 5 университетов под ваш бюджет</li>
+                            <li>Гарантия поступления (или возврат)</li>
+                            <li>Полное визовое сопровождение</li>
+                            <li>Бронирование общежития</li>
+                            <li>Поддержка 24/7 в чате</li>
+                        </ul>
+                        <a href="university.html" class="order-btn" style="background: var(--color-red); color: white;">Заказать сопровождение</a>
+                    </div>
+                </div>
+
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">📄</span>
+                        <h3>Базовый Старт</h3>
+                        <p class="short-desc">Для тех, кто уже выбрал ВУЗ, но боится ошибиться в документах. Мы берем на себя всю бюрократию.</p>
+                        <span class="price-tag">350 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li>Аудит ваших документов</li>
+                            <li>Присяжный перевод (до 5 страниц)</li>
+                            <li>Проставление Апостиля</li>
+                            <li>Регистрация в системе 1 ВУЗа</li>
+                            <li>Консультация по визовой анкете</li>
+                        </ul>
+                        <a href="basic.html" class="order-btn">Выбрать пакет</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">🗣️</span>
+                        <h3>Языковой Год (Зерувка)</h3>
+                        <p class="short-desc">Идеально для старта с нуля. Год изучения языка при университете + гарантированное поступление через год.</p>
+                        <span class="price-tag">290 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li>Подбор оптимального курса (Зерувки)</li>
+                            <li>Регистрация и получение приглашения</li>
+                            <li>Визовая поддержка на 12 месяцев</li>
+                            <li>Помощь в поиске жилья на первый год</li>
+                            <li>Консультация по дальнейшему поступлению</li>
+                        </ul>
+                        <a href="language.html" class="order-btn">Начать учить язык</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">💎</span>
+                        <h3>VIP Менторство</h3>
+                        <p class="short-desc">Личный куратор в Польше. Для тех, кому важен максимальный комфорт и решение любых вопросов на месте.</p>
+                        <span class="price-tag">990 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li><strong>Пакет "Под ключ" включен</strong></li>
+                            <li>Личный ментор (встреча в аэропорту)</li>
+                            <li>Поиск VIP-квартиры и проверка договора</li>
+                            <li>Открытие счета в банке, сим-карта</li>
+                            <li>Экскурсия по городу и ВУЗу</li>
+                            <li>Юридическая поддержка 1 месяц</li>
+                        </ul>
+                        <a href="vip.html" class="order-btn">Выбрать VIP</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">🏢</span>
+                        <h3>Полицеальная Школа</h3>
+                        <p class="short-desc">Бесплатное образование для взрослых. Получение профессии и основания для ВНЖ (Карты Побыту).</p>
+                        <span class="price-tag">150 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li>Запись в школу без экзаменов</li>
+                            <li>Гарантированное бронирование места</li>
+                            <li>Подготовка документов для визы D</li>
+                            <li>Инструкция по подаче на ВНЖ</li>
+                            <li>Список необходимых вещей для переезда</li>
+                        </ul>
+                        <a href="school.html" class="order-btn">Записаться в школу</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">📑</span>
+                        <h3>ВНЖ (Карта Побыту)</h3>
+                        <p class="short-desc">Уже в Польше? Поможем собрать документы и правильно подать заявление на Временный Вид на Жительство.</p>
+                        <span class="price-tag">250 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li>Анализ вашей ситуации юристом</li>
+                            <li>Сбор и проверка полного пакета документов</li>
+                            <li>Заполнение Wniosek (анкеты) без ошибок</li>
+                            <li>Запись в ужонд (по возможности)</li>
+                            <li>Сопровождение до получения децизии</li>
+                        </ul>
+                        <a href="legalization.html" class="order-btn">Оформить ВНЖ</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">📑</span>
+                        <h3>ВНЖ (Карта Побыту)</h3>
+                        <p class="short-desc">Уже в Польше? Поможем собрать документы и правильно подать заявление на Временный Вид на Жительство.</p>
+                        <span class="price-tag">250 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li>Анализ вашей ситуации юристом</li>
+                            <li>Сбор и проверка полного пакета документов</li>
+                            <li>Заполнение Wniosek (анкеты) без ошибок</li>
+                            <li>Запись в ужонд (по возможности)</li>
+                            <li>Сопровождение до получения децизии</li>
+                        </ul>
+                        <a href="legalization.html" class="order-btn">Оформить ВНЖ</a>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="card-visible">
+                        <span class="card-icon">📑</span>
+                        <h3>ВНЖ (Карта Побыту)</h3>
+                        <p class="short-desc">Уже в Польше? Поможем собрать документы и правильно подать заявление на Временный Вид на Жительство.</p>
+                        <span class="price-tag">250 €</span>
+                    </div>
+                    <div class="card-hidden">
+                        <ul class="detail-list">
+                            <li>Анализ вашей ситуации юристом</li>
+                            <li>Сбор и проверка полного пакета документов</li>
+                            <li>Заполнение Wniosek (анкеты) без ошибок</li>
+                            <li>Запись в ужонд (по возможности)</li>
+                            <li>Сопровождение до получения децизии</li>
+                        </ul>
+                        <a href="legalization.html" class="order-btn">Оформить ВНЖ</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>🎓 Бакалавриат</h3>
-            <p>Полное сопровождение для выпускников школ. Поможем выбрать университет (государственный или частный), переведем аттестат, подадим документы.</p>
+    <section class="process-section">
+        <h2 class="section-title" style="color: white; text-align: center;">Как это <span class="text-red">работает?</span></h2>
+        <div class="timeline-container" style="margin-top: 60px;">
+            <div class="timeline-item">
+                <span class="step-num">Шаг 01 / Январь - Март</span>
+                <h3>Бесплатная консультация</h3>
+                <p style="color: #aaa;">Мы созваниваемся, определяем твой уровень языка, бюджет и выбираем стратегию поступления.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="step-num">Шаг 02 / Апрель - Май</span>
+                <h3>Сбор документов</h3>
+                <p style="color: #aaa;">Ты присылаешь сканы, мы делаем присяжные переводы (Tłumacz Przysięgły) и апостиль.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="step-num">Шаг 03 / Июнь - Июль</span>
+                <h3>Подача заявлений</h3>
+                <p style="color: #aaa;">Регистрируемся в системах ВУЗов. Оплачиваем рекрутационные сборы. Получаем документ о зачислении.</p>
+            </div>
+            <div class="timeline-item">
+                <span class="step-num">Шаг 04 / Август</span>
+                <h3>Виза и Отъезд</h3>
+                <p style="color: #aaa;">Готовим анкету для консульства, получаем визу, бронируем общежитие и встречаем тебя в Польше.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="service-card">
-            <h3>📚 Магистратура</h3>
-            <p>Для тех, кто хочет повысить квалификацию. Помощь с нострификацией диплома и поступлением на программы masters.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>🗣 Языковые курсы</h3>
-            <p>Годовые курсы польского или английского языка ("зерувка") при университетах для подготовки к учебе.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>📄 Визовая поддержка</h3>
-            <p>Помощь в сборе пакета документов для консульства, заполнение анкеты на визу, страховка.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>🏠 Поиск жилья</h3>
-            <p>Поможем найти общежитие или квартиру до вашего приезда. Проверка договора аренды.</p>
-        </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 50px;">
-        <p>Не нашли то, что искали?</p>
-        <a href="contact.html" class="btn">Написать нам</a>
-    </div>
 </main>
 
 <footer>
-    <p>&copy; 2023 WU Admission. Все права защищены.</p>
+    <div class="footer-content">
+        <h2>Остались вопросы?</h2>
+        <p>Не знаешь, что выбрать? Запишись на бесплатный разбор твоей ситуации.</p>
+        <a href="contact.html" class="big-btn">Связаться с нами</a>
+    </div>
+    <div class="copyright">
+        &copy; 2024 WU Admission. Designed with ❤️.
+    </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+        // Логика хедера
+        ScrollTrigger.create({
+            start: "top -50",
+            end: 99999,
+            toggleClass: { className: "scrolled", targets: "header" }
+        });
+        // Анимация появления карточек
+        gsap.from(".service-card-modern", {
+            y: 50, opacity: 0, duration: 0.8, stagger: 0.1, scrollTrigger: ".services-big-grid"
+        });
+    });
+</script>
 </body>
 </html>

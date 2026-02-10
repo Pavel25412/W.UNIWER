@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Базовый Пакет - Экономный старт</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body> <header>
+  <a href="index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="contact.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="basic-hero">
+    <h1 class="page-title-big">Я САМ,<br><span style="color: #999;">НО С ПОДСТРАХОВКОЙ</span></h1>
+    <p class="page-subtitle" style="color: #666;">
+      Ты выбрал ВУЗ и знаешь, что делать, но боишься ошибиться в бумагах? Мы проверим документы и сделаем переводы.
+    </p>
+    <a href="contact.html" class="big-btn" style="margin-top: 40px; background: #333; color: white;">Заказать аудит (350€)</a>
+  </section>
+
+  <section class="features-grid-simple">
+    <div class="feature-simple">
+      <div class="feature-icon-circle">🔍</div>
+      <h3>Аудит документов</h3>
+      <p>Проверим ваш аттестат, приложение, медсправки. Скажем, где не хватает печати или подписи, чтобы ВУЗ не вернул документы.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">📜</div>
+      <h3>Присяжный перевод</h3>
+      <p>В пакет входит 5 страниц перевода у польского присяжного переводчика (Tłumacz Przysięgły). Это обязательно для всех.</p>
+    </div>
+    <div class="feature-simple">
+      <div class="feature-icon-circle">🖊️</div>
+      <h3>Одна регистрация</h3>
+      <p>Мы зарегистрируем вас в системе одного выбранного вами ВУЗа, загрузим сканы и оплатим рекрутационный сбор (сбор оплачиваете вы).</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2>Начни уверенно</h2>
+    <a href="contact.html" class="big-btn">Оставить заявку</a>
+  </div>
+  <div class="copyright">&copy; 2024 WU Admission.</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof gsap !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.create({ start: "top -50", end: 99999, toggleClass: { className: "scrolled", targets: "header" } });
+    }
+  });
+</script>
+</body>
+</html>
