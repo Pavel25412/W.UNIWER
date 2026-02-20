@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Подать заявку - WU Admission</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <a href="../index.html" class="logo-container">
+    <div class="logo-box">WU</div>
+    <span class="logo-text">W.Uniwer</span>
+  </a>
+  <nav>
+    <a href="../index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="contact.html">Контакты</a>
+    <a href="apply.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main class="apply-hero">
+  <div class="form-container">
+
+    <div class="progress-bar-container" id="progressContainer">
+      <div class="progress-steps">
+        <div class="progress-line" id="progressLine"></div>
+        <div class="step-circle active">1</div>
+        <div class="step-circle">2</div>
+        <div class="step-circle">3</div>
+      </div>
+    </div>
+
+    <form id="multiStepForm" onsubmit="event.preventDefault();">
+
+      <div class="form-step active" id="step1">
+        <h2 class="step-title">Давайте познакомимся</h2>
+        <p class="step-subtitle">Укажите ваши контактные данные, чтобы мы могли связаться.</p>
+
+        <div style="display: flex; gap: 15px;">
+          <div class="apply-group" style="flex: 1;">
+            <label>Имя</label>
+            <input type="text" id="applyName" class="apply-input" placeholder="Иван" required>
+          </div>
+          <div class="apply-group" style="flex: 1;">
+            <label>Фамилия</label>
+            <input type="text" id="applySurname" class="apply-input" placeholder="Иванов" required>
+          </div>
+        </div>
+
+        <div class="apply-group">
+          <label>Номер телефона</label>
+          <input type="tel" id="applyPhone" class="apply-input" placeholder="+380XX XXX XX XX" required>
+        </div>
+
+        <div class="apply-group">
+          <label>E-mail</label>
+          <input type="email" id="applyEmail" class="apply-input" placeholder="example@gmail.com" required>
+        </div>
+
+        <div class="form-nav-buttons">
+          <button type="button" class="btn-next" onclick="nextStep(1)">Далее &rarr;</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="step2">
+        <h2 class="step-title">Откуда вы?</h2>
+        <p class="step-subtitle">Это поможет нам сориентировать вас по процессу подачи документов.</p>
+
+        <div class="apply-group">
+          <label>Область проживания</label>
+          <select id="applyRegion" class="apply-input" required>
+            <option value="" disabled selected>Выберите область...</option>
+            <option value="Киевская область">Киев и Киевская область</option>
+            <option value="Львовская область">Львовская область</option>
+            <option value="Одесская область">Одесская область</option>
+            <option value="Харьковская область">Харьковская область</option>
+            <option value="Днепропетровская область">Днепропетровская область</option>
+            <option value="Другая область Украины">Другая область Украины</option>
+            <option value="Уже в Польше">Уже нахожусь в Польше</option>
+            <option value="Другая страна">Другая страна</option>
+          </select>
+        </div>
+
+        <div class="form-nav-buttons">
+          <button type="button" class="btn-prev" onclick="prevStep(2)">&larr; Назад</button>
+          <button type="button" class="btn-next" onclick="nextStep(2)">Далее &rarr;</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="step3">
+        <h2 class="step-title">Финальный штрих</h2>
+        <p class="step-subtitle">Расскажите немного о себе, чтобы мы подобрали идеальный ВУЗ.</p>
+
+        <div class="apply-group">
+          <label>Какое направление вас интересует? <span style="color: red;">*</span></label>
+          <textarea id="applyInterests" class="apply-input" rows="3" placeholder="Например: хочу изучать IT или маркетинг. Увлекаюсь дизайном, люблю математику..." required></textarea>
+        </div>
+
+        <div class="apply-group">
+          <label>Остались вопросы или есть особые пожелания? (Необязательно)</label>
+          <textarea id="applyQuestions" class="apply-input" rows="2" placeholder="Например: планирую ехать с другом, нужна помощь с общежитием, или 'у меня плохие оценки, куда меня возьмут?'..."></textarea>
+        </div>
+
+        <div class="form-nav-buttons">
+          <button type="button" class="btn-prev" onclick="prevStep(3)">&larr; Назад</button>
+          <button type="button" id="submitBtn" class="btn-next" onclick="submitForm()">Отправить заявку ✔</button>
+        </div>
+      </div>
+
+      <div class="form-step" id="stepSuccess">
+        <div class="success-message">
+          <div class="success-icon">✓</div>
+          <h2 class="step-title">Заявка принята!</h2>
+          <p class="step-subtitle" style="margin-bottom: 30px;">Спасибо за доверие. В скором времени с вами свяжутся! </p>
+          <a href="../index.html" class="btn-prev" style="text-decoration: none;">Вернуться на главную</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</main>
+
+<script>
+  // === ЛОГИКА ПЕРЕКЛЮЧЕНИЯ ШАГОВ ===
+  const totalSteps = 3;
+  let currentStep = 1;
+
+  function updateProgress() {
+    const progressLine = document.getElementById('progressLine');
+    const percentage = ((currentStep - 1) / (totalSteps - 1)) * 100;
+    progressLine.style.width = percentage + '%';
+
+    const circles = document.querySelectorAll('.step-circle');
+    circles.forEach((circle, index) => {
+      circle.classList.remove('active', 'completed');
+      if (index < currentStep - 1) {
+        circle.classList.add('completed');
+      } else if (index === currentStep - 1) {
+        circle.classList.add('active');
+      }
+    });
+  }
+
+  function validateStep(stepNum) {
+    const step = document.getElementById('step' + stepNum);
+    const inputs = step.querySelectorAll('input[required], select[required], textarea[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+      if (!input.value) {
+        isValid = false;
+        input.style.borderColor = 'red';
+      } else {
+        input.style.borderColor = '#eee';
+      }
+    });
+    return isValid;
+  }
+
+  function nextStep(stepNum) {
+    if (!validateStep(stepNum)) {
+      alert("Пожалуйста, заполните все обязательные поля!"); // Подсказка, если что-то пропущено
+      return;
+    }
+
+    document.getElementById('step' + stepNum).classList.remove('active');
+    currentStep++;
+    document.getElementById('step' + currentStep).classList.add('active');
+    updateProgress();
+  }
+
+  function prevStep(stepNum) {
+    document.getElementById('step' + stepNum).classList.remove('active');
+    currentStep--;
+    document.getElementById('step' + currentStep).classList.add('active');
+    updateProgress();
+  }
+
+  // === ОТПРАВКА ДАННЫХ В GOOGLE ТАБЛИЦУ ===
+  function submitForm() {
+    if (!validateStep(3)) {
+      alert("Пожалуйста, заполните поле 'Какое направление вас интересует?'");
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.innerText = "Отправка...";
+    btn.disabled = true;
+
+    const GOOGLE_APP_URL = "https://script.google.com/macros/s/AKfycbwC2W2vRUHMsWBHIffIsVAbIPenRavvP8YJbdkE2eajfnNgnZKYlL-nUwIQsg57vmHY/exec";
+
+    const formData = new FormData();
+    formData.append("name", document.getElementById('applyName').value);
+    formData.append("surname", document.getElementById('applySurname').value);
+    formData.append("phone", document.getElementById('applyPhone').value);
+    formData.append("email", document.getElementById('applyEmail').value);
+    formData.append("region", document.getElementById('applyRegion').value);
+    formData.append("interests", document.getElementById('applyInterests').value);
+    formData.append("questions", document.getElementById('applyQuestions').value);
+
+    fetch(GOOGLE_APP_URL, {
+      method: 'POST',
+      mode: 'no-cors', // ЭТО САМАЯ ВАЖНАЯ СТРОЧКА!
+      body: formData
+    })
+            .then(() => {
+              // Экран успеха
+              document.getElementById('step3').classList.remove('active');
+              document.getElementById('progressContainer').style.display = 'none';
+              document.getElementById('stepSuccess').classList.add('active');
+            })
+            .catch(error => {
+              alert("Произошла ошибка сети. Попробуйте еще раз.");
+              btn.innerText = "Отправить заявку ✔";
+              btn.disabled = false;
+            });
+  }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      start: "top -50",
+      end: 99999,
+      toggleClass: { className: "scrolled", targets: "header" }
+    });
+  });
+</script>
+
+</body>
+</html>

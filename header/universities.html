@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог Университетов - WU Admission</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Специфичная сетка для каталога (чтобы перебить настройки с главной страницы) */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 50px 100px;
+    }
+
+    /* Убираем жесткую ширину 400px, чтобы карточки тянулись по сетке ровно */
+    .catalog-grid .uni-card {
+      width: 100% !important;
+      display: block !important;
+    }
+
+    .no-results {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #888;
+      grid-column: 1 / -1;
+      padding: 50px 0;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .catalog-grid { padding: 0 20px 80px; }
+    }
+  </style>
+</head>
+<body class="dark-page">
+
+<header>
+  <a href="../index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+  <nav>
+    <a href="../index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="universities.html" class="active" style="color: var(--color-red);">ВУЗы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="apply.html" class="nav-btn">Подать заявку</a>
+  </nav>
+</header>
+
+<main>
+  <section class="catalog-hero">
+    <h1 class="page-title-big">Каталог ВУЗов</h1>
+    <p class="page-subtitle" style="color: #888; margin-top: 10px;">Выберите идеальный университет в Польше с помощью нашего фильтра.</p>
+  </section>
+
+  <section class="filter-section">
+    <div class="filter-group">
+      <label>Город</label>
+      <select id="cityFilter" class="filter-select" onchange="filterUniversities()">
+        <option value="all">Все города</option>
+        <option value="warsaw">Варшава</option>
+        <option value="krakow">Краков</option>
+        <option value="wroclaw">Вроцлав</option>
+        <option value="lublin">Люблин</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Тип ВУЗа</label>
+      <select id="typeFilter" class="filter-select" onchange="filterUniversities()">
+        <option value="all">Все типы</option>
+        <option value="public">Государственный</option>
+        <option value="private">Частный</option>
+        <option value="tech">Технический (Политехника)</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Язык обучения</label>
+      <select id="langFilter" class="filter-select" onchange="filterUniversities()">
+        <option value="all">Любой язык</option>
+        <option value="pl">Польский</option>
+        <option value="en">Английский</option>
+      </select>
+    </div>
+  </section>
+
+  <section>
+    <div class="catalog-grid" id="uniGrid">
+
+      <div id="noResults" class="no-results">
+        По вашему запросу ВУЗов не найдено 😔 <br> Попробуйте изменить параметры фильтра.
+      </div>
+
+      <a href="../university/warsaw.html" class="uni-card" data-city="warsaw" data-type="public" data-lang="pl en">
+        <div class="uni-img" style="background-image: url('../university/photo_of_universities/uw.jpg');"></div>
+        <h3>Варшавский Университет</h3>
+        <p>#1 в рейтинге Польши (Варшава)</p>
+      </a>
+
+      <a href="../university/jagiellonian.html" class="uni-card" data-city="krakow" data-type="public" data-lang="pl en">
+        <div class="uni-img" style="background-image: url('../university/photo_of_universities/uj.jpg');"></div>
+        <h3>Ягеллонский Университет</h3>
+        <p>Старейший вуз страны (Краков)</p>
+      </a>
+
+      <a href="../university/wroclaw.html" class="uni-card" data-city="wroclaw" data-type="tech" data-lang="pl en">
+        <div class="uni-img" style="background-image: url('../university/photo_of_universities/pw.jpg');"></div>
+        <h3>Вроцлавская Политехника</h3>
+        <p>Для будущих инженеров (Вроцлав)</p>
+      </a>
+
+      <a href="../university/sgh.html" class="uni-card" data-city="warsaw" data-type="public" data-lang="pl en">
+        <div class="uni-img" style="background-image: url('../university/photo_of_universities/sgh.jpg');"></div>
+        <h3>SGH Варшава</h3>
+        <p>Главный экономический ВУЗ</p>
+      </a>
+
+      <a href="../university/umcs.html" class="uni-card" data-city="lublin" data-type="public" data-lang="pl en">
+        <div class="uni-img" style="background-image: url('../university/photo_of_universities/umcs.jpg');"></div>
+        <h3>UMCS Люблин</h3>
+        <p>Лучший студгородок (Люблин)</p>
+      </a>
+
+      <a href="../university/agh.html" class="uni-card" data-city="krakow" data-type="tech" data-lang="pl en">
+        <div class="uni-img" style="background-image: url('../university/photo_of_universities/agh.jpg');"></div>
+        <h3>AGH Краков</h3>
+        <p>Технологии будущего (Краков)</p>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <h2 style="color: white;">Поступим вместе</h2>
+    <a href="apply.html" class="big-btn">Оставить заявку</a>
+  </div>
+  <div class="copyright">© 2024 WU Admission.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+      start: "top -50",
+      end: 99999,
+      toggleClass: { className: "scrolled", targets: "header" }
+    });
+  });
+
+  // === ЛОГИКА ФИЛЬТРАЦИИ ===
+  function filterUniversities() {
+    const cityValue = document.getElementById('cityFilter').value;
+    const typeValue = document.getElementById('typeFilter').value;
+    const langValue = document.getElementById('langFilter').value;
+
+    const cards = document.querySelectorAll('.uni-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardCity = card.getAttribute('data-city');
+      const cardType = card.getAttribute('data-type');
+      const cardLang = card.getAttribute('data-lang');
+
+      const matchCity = (cityValue === 'all' || cardCity === cityValue);
+      const matchType = (typeValue === 'all' || cardType === typeValue);
+      const matchLang = (langValue === 'all' || cardLang.includes(langValue));
+
+      if (matchCity && matchType && matchLang) {
+        // Убрали flex, теперь карточка ведет себя правильно!
+        card.style.display = '';
+        gsap.fromTo(card, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.3 });
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const noResultsMsg = document.getElementById('noResults');
+    if (visibleCount === 0) {
+      noResultsMsg.style.display = 'block';
+    } else {
+      noResultsMsg.style.display = 'none';
+    }
+  }
+</script>
+</body>
+</html>
