@@ -1,5 +1,3 @@
-/* style.css — ИСПРАВЛЕННОЕ МЕНЮ VIP + СЕТКА 3x3 */
-
 :root {
     --color-red: #D64640;
     --color-dark: #111111;
@@ -238,21 +236,220 @@ nav a:hover { opacity: 0.6; }
 .item-4 { grid-column: span 1; }
 .item-5 { grid-column: span 2; background-color: var(--color-red); color: white; }
 
+/* ========================================= */
+/* === СТРАНИЦА ЗАЯВКИ (MULTI-STEP FORM) === */
+/* ========================================= */
+
+.apply-hero {
+    background: #f8f9fa;
+    min-height: 100vh;
+    padding: 150px 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+/* Индикатор прогресса */
+.progress-bar-container {
+    margin-bottom: 30px;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background: #eee;
+    z-index: 1;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%; /* Будет меняться через JS */
+    background: var(--color-red);
+    z-index: 2;
+    transition: 0.4s ease;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #999;
+    z-index: 3;
+    transition: 0.4s ease;
+}
+
+.step-circle.active {
+    background: var(--color-red);
+    color: white;
+}
+
+.step-circle.completed {
+    background: var(--color-dark);
+    color: white;
+}
+
+/* Шаги формы */
+.form-step {
+    display: none;
+    animation: fadeInStep 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.step-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+}
+
+.step-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Поля ввода  */
+.apply-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.apply-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.apply-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: 0.3s;
+    background: #fdfdfd;
+    box-sizing: border-box;
+}
+
+.apply-input:focus {
+    border-color: var(--color-red);
+    background: white;
+    outline: none;
+}
+
+/* Select */
+select.apply-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+    cursor: pointer;
+}
+
+/* Кнопки навигации */
+.form-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.btn-prev {
+    background: #eee;
+    color: #333;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-prev:hover { background: #ddd; }
+
+.btn-next {
+    background: var(--color-red);
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: auto;
+}
+
+.btn-next:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(214, 70, 64, 0.3); }
+
+.success-message {
+    text-align: center;
+    padding: 20px 0;
+}
+.success-icon {
+    font-size: 4rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-container { padding: 30px 20px; }
+}
+
 /* --- UNIVERSITIES (ГОРИЗОНТАЛЬНЫЙ СКРОЛЛ) --- */
 .universities-section {
-    /* Важно: ставим высоту секции по экрану, длину скролла создаст JS */
     height: 100vh;
     background: #111;
     color: white;
-    overflow: hidden; /* Скрываем всё, что вылезает за экран */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Центрируем контент по вертикали */
+    justify-content: center;
     position: relative;
-    padding: 0; /* Убираем отступы */
+    padding: 0;
 }
 
-/* Обертка больше не sticky, она просто контейнер */
 .uni-sticky {
     width: 100%;
     display: flex;
@@ -268,40 +465,34 @@ nav a:hover { opacity: 0.6; }
 }
 
 .uni-container {
-    display: flex; /* В ряд */
-    gap: 40px;     /* Расстояние между карточками */
-    padding-left: 50px; /* Отступ слева */
-    padding-right: 50px; /* Отступ справа, чтобы последняя карточка не прилипала */
-    width: max-content; /* Ширина равна длине всех карточек */
+    display: flex;
+    gap: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: max-content;
 }
 
 .uni-card {
-    width: 400px; /* Сделал чуть шире для солидности */
+    width: 400px;
     flex-shrink: 0;
 }
 
 .uni-img {
-    /* 1. Перебиваем высоту (было 300px, ставим аккуратные 220px) */
     height: 220px !important;
     width: 100% !important;
 
-    /* 2. ГЛАВНОЕ: Заставляем логотип вместиться целиком и встать по центру */
-    /* !important нужен, чтобы перебить настройки "70%" из HTML */
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
+    background-size: cover !important;
     background-position: center !important;
+    background-repeat: no-repeat !important;
 
-    /* 3. Делаем белый фон вместо серого (#f0f0f0), который прописан в HTML */
-    background-color: #ffffff !important;
+    padding: 0 !important;
+    border: none !important;
+
     border-radius: 15px !important;
-
-    /* 4. Добавляем рамку, чтобы логотип не прилипал к краям */
-    border: 15px solid #ffffff !important;
-    box-sizing: border-box !important;
+    background-color: #222 !important;
 
     margin-bottom: 20px !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Легкая тень для объема */
-
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
 }
 
@@ -643,7 +834,7 @@ footer {
 
 .doc-list {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 100px auto;
     background: white;
     padding: 50px;
     border-radius: 20px;
@@ -1179,4 +1370,105 @@ footer {
     .campus-content.active { flex-direction: column; }
     .campus-map-wrapper { height: 300px; min-height: auto; }
     .campus-info { padding: 30px 20px; }
+}
+
+/* ========================================= */
+/* === КАТАЛОГ ВУЗОВ (ФИЛЬТРЫ И ТЕМНАЯ ТЕМА) === */
+/* ========================================= */
+
+body.dark-page {
+    background-color: #111111;
+    color: white;
+}
+
+.dark-page header:not(.scrolled) .logo-container,
+.dark-page header:not(.scrolled) nav a { color: white !important; }
+.dark-page header:not(.scrolled) .logo-box { background: white !important; color: black !important; }
+.dark-page header:not(.scrolled) .nav-btn { color: white !important; border-color: white !important; }
+.dark-page header:not(.scrolled) .nav-btn:hover { background: white !important; color: black !important; }
+
+.catalog-hero {
+    padding: 180px 20px 40px;
+    text-align: center;
+}
+
+.filter-section {
+    background: #1a1a1a;
+    padding: 25px 40px;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    border: 1px solid #333;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: sticky;
+    top: 90px;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 220px;
+}
+
+.filter-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-select {
+    padding: 12px 15px;
+    border: 1px solid #444;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #222;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.filter-select:focus, .filter-select:hover {
+    border-color: var(--color-red);
+}
+
+/* Сообщение "Не найдено" */
+.no-results {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #888;
+    grid-column: 1 / -1;
+    padding: 50px 0;
+    display: none;
+    width: 100%;
+}
+
+.catalog-grid-wrapper {
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+    .filter-section { flex-direction: column; padding: 20px; top: 70px; }
+    .filter-group { min-width: 100%; }
+}
+
+.dark-page .uni-card,
+.dark-page .uni-card h3,
+.dark-page .uni-card p {
+    text-decoration: none !important;
+    color: white !important;
 }
