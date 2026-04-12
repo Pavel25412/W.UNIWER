@@ -38,7 +38,7 @@
       <span class="uni-stat-label">Год основания</span>
     </div>
     <div class="uni-stat-item">
-      <span class="uni-stat-val">20k+</span>
+      <span class="uni-stat-val">18k+</span>
       <span class="uni-stat-label">Студентов</span>
     </div>
     <div class="uni-stat-item">
@@ -50,22 +50,30 @@
   <div class="page-wrapper" style="padding-top: 0;">
     <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
 
-      <div class="info-block">
-        <div class="info-text">
-          <h3>Лучший кампус Польши</h3>
-          <p>Главная фишка UMCS — уникальный "Miasteczko Akademickie". Это огромный парк в центре города, где расположены ВСЕ факультеты, общежития, клубы и спортзалы.</p>
-          <p>Вам не нужно ездить на транспорте. От общежития до лекции — 5 минут пешком через парк. Это создает невероятную атмосферу студенческого братства.</p>
+      <h2 style="text-align: center; margin-bottom: 30px;">Детальная информация об университете</h2>
+      <div class="info-tabs-container">
+        <div class="info-tabs-header">
+          <button class="info-tab-btn active" onclick="openInfoTab(event, 'about')">🏛️ Об университете</button>
+          <button class="info-tab-btn" onclick="openInfoTab(event, 'campus')">🏢 Кампус и Жизнь</button>
+          <button class="info-tab-btn" onclick="openInfoTab(event, 'international')">🌍 Программы</button>
         </div>
-        <div class="info-img" style="background-image: url('https://www.umcs.pl/gfx/umcs/userfiles/_public/wspolpraca/biznes/fot._p._bobinski.jpg');"></div>
-      </div>
 
-      <div class="info-block reverse">
-        <div class="info-text">
-          <h3>Chatka Żaka</h3>
-          <p>Легендарный культурный центр прямо в кампусе. Концерты, кинопоказы, театральные студии — всё здесь.</p>
-          <p>Люблин дешевле Варшавы на 30-40%, но диплом UMCS ценится так же высоко. Идеальный старт для тех, кто хочет сэкономить бюджет, не теряя в качестве.</p>
+        <div id="about" class="info-tab-content active">
+          <p><strong>Государственный Университет им. Марии Кюри-Склодовской (UMCS)</strong> — крупнейший и самый престижный государственный ВУЗ в восточной Польше, основанный в 1944 году. На сегодняшний день здесь обучается более 18 000 студентов, а количество выпускников превышает 250 000 человек.</p>
+          <p><strong>Инфраструктура и инновации:</strong> Университет обладает мощной научно-исследовательской базой. Визитными карточками UMCS являются аналитико-программный центр «Ecotech-Complex» и современный Медиа-инкубатор, оснащенный профессиональным радио- и телевизионным оборудованием.</p>
+          <p><strong>Преимущества:</strong> В основе обучения лежит максимальная ориентация на современный рынок труда. ВУЗ отмечен престижными наградами «Дружелюбный к работодателю» и «Кузница лидеров».</p>
         </div>
-        <div class="info-img" style="background-image: url('https://kurierlubelski.pl/img/art/db/5e/14588509_0.jpg');"></div>
+
+        <div id="campus" class="info-tab-content">
+          <p><strong>Академический городок (Miasteczko Akademickie):</strong> Уникальная особенность UMCS — компактное расположение всей инфраструктуры. Учебные корпуса, библиотеки, спортивные залы и общежития находятся в едином пространстве, окруженном парковыми зонами.</p>
+          <p><strong>Общежития:</strong> Университет располагает 9 собственными комфортабельными общежитиями (1-ми, 2-х и 3-местные комнаты). В каждом есть доступ к интернету, прачечные, комнаты для тихой учебы и зоны отдыха. Стоимость проживания варьируется от 430 до 550 PLN в месяц.</p>
+          <p><strong>Студенческая жизнь:</strong> Центром культурной жизни является легендарный комплекс «Chatka Żaka». Студенты могут развивать себя в десятках организаций: хор UMCS, танцевальные коллективы, университетское радио и телестудия, а также мощный спортивный центр (бассейн, тренажерные залы).</p>
+        </div>
+
+        <div id="international" class="info-tab-content">
+          <p><strong>Программа Erasmus+:</strong> UMCS имеет более 200 партнерских договоров с университетами по всей Европе. Ежегодно сотни студентов отправляются на 1 или 2 семестра по обмену в Германию, Испанию, Италию, Францию и другие страны, получая при этом европейскую стипендию.</p>
+          <p><strong>Двойные дипломы и стажировки:</strong> Университет активно сотрудничает с международными корпорациями, предоставляя студентам возможность проходить оплачиваемые стажировки за рубежом еще во время учебы. Многие научные и дидактические проекты финансируются из фондов ЕС.</p>
+        </div>
       </div>
 
       <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
@@ -140,50 +148,84 @@
         </div>
       </div>
 
-      <h2 style="margin-bottom: 20px;">Стоимость обучения (2024/25)</h2>
+      <hr style="border: 0; border-top: 1px solid #eee; margin: 60px 0;">
+
+      <h2 style="margin-bottom: 20px;">Факультеты и стоимость (Бакалавриат)</h2>
       <div class="pricing-controls">
         <button class="currency-btn active" onclick="setCurrency('EUR')">EUR (€)</button>
         <button class="currency-btn" onclick="setCurrency('PLN')">PLN (zł)</button>
         <button class="currency-btn" onclick="setCurrency('UAH')">UAH (₴)</button>
       </div>
 
-      <table class="prices-table">
-        <thead>
-        <tr>
-          <th>Направление</th>
-          <th>Язык</th>
-          <th>Цена / год</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td><strong>Международные отношения</strong></td>
-          <td>Польский</td>
-          <td class="price-val" data-eur="1500">1500 €</td>
-        </tr>
-        <tr>
-          <td><strong>Информатика</strong></td>
-          <td>Английский</td>
-          <td class="price-val" data-eur="2500">2500 €</td>
-        </tr>
-        <tr>
-          <td><strong>Менеджмент</strong></td>
-          <td>Польский</td>
-          <td class="price-val" data-eur="1300">1300 €</td>
-        </tr>
-        <tr>
-          <td><strong>Журналистика</strong></td>
-          <td>Польский</td>
-          <td class="price-val" data-eur="1400">1400 €</td>
-        </tr>
-        <tr>
-          <td><strong>Графический дизайн (Искусство)</strong></td>
-          <td>Польский</td>
-          <td class="price-val" data-eur="1800">1800 €</td>
-        </tr>
-        </tbody>
-      </table>
-      <p style="font-size: 0.8rem; color: #999; margin-top: 15px; text-align: right;">*Цены ориентировочные.</p>
+      <div class="accordion-container">
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            Экономический факультет <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <table class="acc-table">
+                <tr><td>Міжнародні економічні відносини</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Економіка (Прикладна / Стартапи)</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Фінанси та бухгалтерський облік</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Менеджмент (Управління)</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Business Management</td><td>Англійський</td><td class="price-val" data-eur="2500">2 500 €</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            Информатика и Точные науки <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <table class="acc-table">
+                <tr><td>Інформатика</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>IT / Computer Science</td><td>Англійський</td><td class="price-val" data-eur="2500">2 500 €</td></tr>
+                <tr><td>Математика в фінансах</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Фізика та Інженерія матеріалів</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            Филология и Иностранные языки <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <table class="acc-table">
+                <tr><td>Англійська філологія</td><td>Польський/Англ</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Прикладна лінгвістика</td><td>Польський/Англ</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Романістика</td><td>Польський/Франц</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Іспаністика</td><td>Польський/Іспан</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            Гуманитарные и Общественные науки <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <table class="acc-table">
+                <tr><td>Психологія (Магістратура 5 років)</td><td>Польський</td><td class="price-val" data-eur="1800">1 800 €</td></tr>
+                <tr><td>Журналістика та медіа-комунікації</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Міжнародні відносини</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+                <tr><td>Міжнародні відносини</td><td>Англійський</td><td class="price-val" data-eur="2000">2 000 €</td></tr>
+                <tr><td>Право (Магістратура 5 років)</td><td>Польський</td><td class="price-val" data-eur="1600">1 600 €</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
   </div>
@@ -214,10 +256,35 @@
       end: 99999,
       toggleClass: { className: "scrolled", targets: "header" }
     });
-    gsap.from(".info-block", {
-      y: 50, opacity: 0, duration: 0.8, stagger: 0.3, scrollTrigger: ".info-block"
-    });
   });
+
+  // === ЛОГИКА ИНФО-ТАБОВ ===
+  function openInfoTab(evt, tabName) {
+    document.querySelectorAll('.info-tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.info-tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+
+  // === ЛОГИКА АККОРДЕОНА ===
+  function toggleAccordion(btn) {
+    const item = btn.parentElement;
+    const content = btn.nextElementSibling;
+
+    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+      if(otherItem !== item) {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+      }
+    });
+
+    item.classList.toggle('active');
+    if (item.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+  }
 
   // === ТАБЫ КАМПУСОВ ===
   function openCampus(campusId) {
@@ -227,7 +294,7 @@
     event.target.classList.add('active');
   }
 
-  // === ВАЛЮТЫ ===
+  // === ВАЛЮТЫ ДЛЯ АККОРДЕОНА ===
   const RATES = { EUR: 1, PLN: 4.30, UAH: 42.50 };
   const SYMBOLS = { EUR: '€', PLN: 'zł', UAH: '₴' };
 
@@ -241,7 +308,8 @@
       gsap.to(price, {
         duration: 0.2, opacity: 0,
         onComplete: () => {
-          price.innerText = `${newPrice} ${SYMBOLS[currency]}`;
+          // Форматируем с пробелом тысяч (например, 1 600)
+          price.innerText = `${newPrice.toLocaleString('ru-RU')} ${SYMBOLS[currency]}`;
           gsap.to(price, { duration: 0.2, opacity: 1 });
         }
       });
