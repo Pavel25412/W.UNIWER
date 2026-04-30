@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b27c71b8-3db4-49cd-a222-1905579fa750" name="Changes" comment="Bug fix">
+      <change afterPath="$PROJECT_DIR$/front-end/header/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header/apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/apply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header/universities.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/universities.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/LOGO_HEADER.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/LOGO_HEADER.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/UMCS_rozsz_12G_PL_rgb.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/UMCS_rozsz_12G_PL_rgb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/agh_znk_wbr_rgb_150ppi.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/agh_znk_wbr_rgb_150ppi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/logoPWr_PL_pion_kolor_v2.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/logoPWr_PL_pion_kolor_v2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/sgh.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/sgh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/uj.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/uj.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo/uw.png" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/logo/uw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/JetBrainsMono-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/fonts/JetBrainsMono-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/JetBrainsSans-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/fonts/JetBrainsSans-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/language.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/language.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/legalization.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/legalization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/school.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/school.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/vip.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/vip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/main_page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/agh.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/agh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/jagiellonian.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/jagiellonian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/map_kampus/map.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/map_kampus/map.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/map_kampus/mapa_umcs.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/map_kampus/mapa_umcs.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/photo_of_universities/agh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/photo_of_universities/agh.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/photo_of_universities/pw.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/photo_of_universities/pw.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/photo_of_universities/sgh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/photo_of_universities/sgh.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/photo_of_universities/uj.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/photo_of_universities/uj.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/photo_of_universities/umcs.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/photo_of_universities/umcs.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/photo_of_universities/uw.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/photo_of_universities/uw.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/sgh.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/sgh.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/umcs.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/umcs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/warsaw.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/warsaw.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/university/wroclaw.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/wroclaw.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="309" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="tsconfig.json" />
+        <option value="HTTP Request" />
+        <option value="package.json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Pavel25412&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Pavel25412/W.UNIWER&quot;,
+    &quot;accountId&quot;: &quot;c4d6a64f-f468-4bf8-a7d6-d82af8a7efda&quot;
+  }
+}</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="38xCHFnWpZWrrPRKOgismXX4VWz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.services2.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;front-end&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/W.UNIWER/Website&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/katyp/AppData/Roaming/JetBrains/WebStorm2025.3/node/versions/24.13.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/W.UNIWER/Website/src/main.js&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\W.UNIWER\\Website\\node_modules\\prettier&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Oracle&quot;,
+      &quot;Markdown&quot;,
+      &quot;HTTP Request&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\W.UNIWER\Website\front-end" />
+      <recent name="D:\W.UNIWER\Website" />
+      <recent name="D:\W.UNIWER\Website\header" />
+      <recent name="D:\W.UNIWER\Website\university\map_kampus" />
+      <recent name="D:\W.UNIWER\Website\Header" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b27c71b8-3db4-49cd-a222-1905579fa750" name="Changes" comment="" />
+      <created>1769731746770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769731746770</updated>
+      <workItem from="1769731747740" duration="4332000" />
+      <workItem from="1769807892287" duration="4482000" />
+      <workItem from="1769864906161" duration="2945000" />
+      <workItem from="1769881574293" duration="1431000" />
+      <workItem from="1769990349094" duration="1337000" />
+      <workItem from="1770584212286" duration="739000" />
+      <workItem from="1770678117356" duration="9689000" />
+      <workItem from="1770687997487" duration="4966000" />
+      <workItem from="1770719108623" duration="13510000" />
+      <workItem from="1771541883634" duration="10619000" />
+      <workItem from="1771578669628" duration="998000" />
+      <workItem from="1773613741553" duration="4247000" />
+      <workItem from="1775948800690" duration="66000" />
+      <workItem from="1775948884209" duration="1687000" />
+      <workItem from="1776004960343" duration="3278000" />
+      <workItem from="1777501382543" duration="5983000" />
+      <workItem from="1777507813948" duration="408000" />
+      <workItem from="1777538257103" duration="6171000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial">
+      <option name="closed" value="true" />
+      <created>1769808027199</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1769808027199</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial">
+      <option name="closed" value="true" />
+      <created>1769808082543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1769808082543</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New design, new form for contact and &#10;something else">
+      <option name="closed" value="true" />
+      <created>1770584571793</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770584571793</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ABSOLUTELY NEW design with animations, new universities and&#10;new offers. Some functions I left,&#10;cuz it works good">
+      <option name="closed" value="true" />
+      <created>1770691425294</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770691425294</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ABSOLUTELY NEW design with animations, new universities and&#10;new offers. Some functions I left,&#10;cuz it works good">
+      <option name="closed" value="true" />
+      <created>1770691465395</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770691465395</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ABSOLUTELY NEW design with animations, new universities and&#10;new offers. Some functions I left,&#10;cuz it works good">
+      <option name="closed" value="true" />
+      <created>1770691478534</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770691478534</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ABSOLUTELY NEW design with animations, new universities and&#10;new offers. Some functions I left,&#10;cuz it works good">
+      <option name="closed" value="true" />
+      <created>1770691636110</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1770691636110</updated>
+    </task>
+    <task id="LOCAL-00008" summary="my bad, sry">
+      <option name="closed" value="true" />
+      <created>1770691659081</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770691659081</updated>
+    </task>
+    <task id="LOCAL-00009" summary="my bad">
+      <option name="closed" value="true" />
+      <created>1770691866079</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770691866079</updated>
+    </task>
+    <task id="LOCAL-00010" summary="my bad">
+      <option name="closed" value="true" />
+      <created>1770692949378</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1770692949378</updated>
+    </task>
+    <task id="LOCAL-00011" summary="New sites about universities, some informations and maps">
+      <option name="closed" value="true" />
+      <created>1770750315370</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770750315370</updated>
+    </task>
+    <task id="LOCAL-00012" summary="New sites about universities, some informations and maps">
+      <option name="closed" value="true" />
+      <created>1770750323258</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770750323258</updated>
+    </task>
+    <task id="LOCAL-00013" summary="New sites about universities, some informations and maps">
+      <option name="closed" value="true" />
+      <created>1770750364947</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770750364947</updated>
+    </task>
+    <task id="LOCAL-00014" summary="New site about requesting a help. Just some questions, anything else">
+      <option name="closed" value="true" />
+      <created>1771555752032</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1771555752032</updated>
+    </task>
+    <task id="LOCAL-00015" summary="New sites: form and list of universities. Filter doesn't work how I want, but i'll change. And yea, new photos of universities. That's All. Au Revoir!">
+      <option name="closed" value="true" />
+      <created>1771555919578</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1771555919578</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1771578752102</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1771578752102</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1771579062830</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1771579062830</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1776005027279</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1776005027279</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1776006480286</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1776006480286</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1776006490348</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1776006490348</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1776006531546</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1776006531546</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="javascript:npm:prettier" />
+    <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial" />
+    <MESSAGE value="New design, new form for contact and &#10;something else" />
+    <MESSAGE value="ABSOLUTELY NEW design with animations, new universities and&#10;new offers. Some functions I left,&#10;cuz it works good" />
+    <MESSAGE value="my bad, sry" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;index.html" />
+    <MESSAGE value="That's last. I promise" />
+    <MESSAGE value="my bad" />
+    <MESSAGE value="New sites about universities, some informations and maps" />
+    <MESSAGE value="New site about requesting a help. Just some questions, anything else" />
+    <MESSAGE value="New sites: form and list of universities. Filter doesn't work how I want, but i'll change. And yea, new photos of universities. That's All. Au Revoir!" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;header/apply.html&#10;#&#9;header/index.html&#10;#&#9;header/universities.html&#10;#&#9;service/basic.html&#10;#&#9;service/language.html&#10;#&#9;service/legalization.html&#10;#&#9;service/school.html&#10;#&#9;service/start.html&#10;#&#9;service/vip.html&#10;#&#9;university/agh.html&#10;#&#9;university/jagiellonian.html&#10;#&#9;university/sgh.html&#10;#&#9;university/umcs.html&#10;#&#9;university/warsaw.html&#10;#&#9;university/wroclaw.html" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="Bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
+  </component>
+</project>

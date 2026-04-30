@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в кабинет | W.Uniwer</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-gray);
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: var(--color-white);
+            width: 100%;
+            max-width: 400px;
+            padding: 50px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .auth-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .auth-subtitle {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 35px;
+        }
+
+        .auth-form {
+            text-align: left;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+
+        .auth-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #eee;
+            border-radius: 15px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .auth-input:focus {
+            border-color: var(--color-red);
+            outline: none;
+            background: #fffafa;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--color-red);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-family: var(--font-head);
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(214, 70, 64, 0.2);
+        }
+
+        .auth-footer {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .auth-footer a {
+            color: var(--color-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<a href="../index.html" class="back-home">← На главную</a>
+
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <div class="logo-box" style="display: inline-block; margin-bottom: 20px;">WU</div>
+        <h2>С возвращением!</h2>
+        <p class="auth-subtitle">Введите данные для доступа в кабинет абитуриента</p>
+
+        <form class="auth-form" action="profile.html">
+            <div class="input-group">
+                <label>ID абитуриента или Email</label>
+                <input type="text" class="auth-input" placeholder="#WU-2026-00" required>
+            </div>
+
+            <div class="input-group">
+                <label>Пароль</label>
+                <input type="password" class="auth-input" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-login">Войти в систему</button>
+        </form>
+
+        <div class="auth-footer">
+            Нет аккаунта? <a href="apply.html">Подать заявку</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
