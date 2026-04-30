@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | W.Uniwer</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../logo/LOGO_HEADER.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Упрощенные стили кабинета */
+        .dashboard-wrapper {
+            padding: 140px 5% 60px;
+            max-width: 1200px; /* Ограничиваем ширину, чтобы контент не растягивался на огромных экранах */
+            margin: 0 auto;
+            background-color: var(--color-white);
+        }
+
+        /* Чистая шапка без лишних рамок */
+        .dashboard-header {
+            margin-bottom: 50px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .text-muted {
+            color: #888888;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* Сетка */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Карточки в стиле минимализма (Flat design) */
+        .clean-card {
+            background-color: #FAFAFA; /* Очень легкий серый вместо рамок */
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        /* Тонкий прогресс-бар */
+        .progress-container {
+            margin: 30px 0;
+        }
+
+        .bar-bg {
+            background: #EAEAEA;
+            height: 6px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            background: var(--color-red);
+            height: 100%;
+            border-radius: 10px;
+            width: 0%; /* Анимируем через обычный CSS/JS */
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Аккуратный список шагов */
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid #EAEAEA;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .step-item:last-child {
+            border-bottom: none;
+        }
+
+        .step-item.active {
+            color: var(--color-red);
+            font-weight: 700;
+        }
+
+        .step-item.muted {
+            color: #BBBBBB;
+        }
+
+        /* Простые ссылки на документы */
+        .doc-link {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #EAEAEA;
+            text-decoration: none;
+            color: var(--color-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+        .doc-link:hover {
+            color: var(--color-red);
+        }
+
+        .doc-link span {
+            color: #888;
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+
+        /* Чистая кнопка */
+        .btn-upload {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--color-red);
+            background: transparent;
+            color: var(--color-red);
+            border-radius: 12px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-upload:hover {
+            background-color: var(--color-red);
+            color: var(--color-white);
+        }
+
+        @media (max-width: 900px) {
+            .dashboard-grid { grid-template-columns: 1fr; }
+            .dashboard-wrapper { padding-top: 100px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="../index.html" class="logo-container">
+        <div class="logo-box">WU</div>
+        <span class="logo-text">W.Uniwer</span>
+    </a>
+    <nav>
+        <div class="dropdown">
+            <a class="dropbtn">Поступление <span class="arrow">▾</span></a>
+            <div class="dropdown-content">
+                <a href="../header/services.html">Наши услуги</a>
+                <a href="../header/universities.html">Каталог ВУЗов</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a class="dropbtn">Контакт <span class="arrow">▾</span></a>
+            <div class="dropdown-content">
+                <a href="../header/contact.html">Контакты</a>
+                <a href="../header/apply.html" style="color: var(--color-red)">Подать заявку</a>
+            </div>
+        </div>
+
+        <a href="../header/profile.html" class="nav-btn">Личный кабинет</a>
+    </nav>
+</header>
+
+<main class="dashboard-wrapper">
+    <div class="dashboard-header">
+        <h1>Привет, <span class="text-red">Иван!</span></h1>
+        <p class="text-muted">ID абитуриента: #WU-2026-08</p>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="clean-card">
+            <h3>Прогресс поступления</h3>
+            <div class="progress-container">
+                <div class="bar-bg">
+                    <div class="bar-fill" id="mainProgress"></div>
+                </div>
+            </div>
+            <ul class="step-list">
+                <li class="step-item">1. Подбор программ и ВУЗов <span style="color: #2ecc71;">✔</span></li>
+                <li class="step-item">2. Перевод и апостиль документов <span style="color: #2ecc71;">✔</span></li>
+                <li class="step-item active">3. Подача заявок в университеты <span>В процессе</span></li>
+                <li class="step-item muted">4. Получение визы и выезд <span>Ожидание</span></li>
+            </ul>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+            <div class="clean-card">
+                <h3>Документы</h3>
+                <a href="#" class="doc-link">Паспорт_скан.pdf <span>PDF</span></a>
+                <a href="#" class="doc-link">Аттестат_полный.pdf <span>PDF</span></a>
+                <button class="btn-upload">+ Загрузить файл</button>
+            </div>
+
+            <div class="clean-card" style="background-color: rgba(214, 70, 64, 0.04); border-left: 4px solid var(--color-red); border-radius: 0 20px 20px 0;">
+                <h3 style="color: var(--color-red);">Внимание</h3>
+                <p style="font-size: 0.95rem; line-height: 1.6; margin-top: 10px; font-weight: 500;">
+                    Университет Jagellonian затребовал дополнительную фотографию. Пожалуйста, загрузите файл до 10 мая.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Проверяем, загрузился ли GSAP и регистрируем плагин
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Та самая логика для шапки: добавляет класс .scrolled при прокрутке вниз
+            ScrollTrigger.create({
+                start: "top -50",
+                end: 99999,
+                toggleClass: { className: "scrolled", targets: "header" }
+            });
+
+            // Анимация выезда карточек при загрузке страницы (оставляем, она красивая)
+            gsap.from(".animate-on-load", {
+                y: 40,
+                opacity: 0,
+                stagger: 0.15,
+                duration: 0.8,
+                ease: "power3.out",
+                delay: 0.2
+            });
+        }
+    });
+</script>
+</body>
+</html>

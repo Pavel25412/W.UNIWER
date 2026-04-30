@@ -10,12 +10,28 @@
 <body>
 
 <header>
-    <a href="../index.html" class="logo-container"><div class="logo-box">WU</div><span class="logo-text">W.Uniwer</span></a>
+    <a href="../index.html" class="logo-container">
+        <div class="logo-box">WU</div>
+        <span class="logo-text">W.Uniwer</span>
+    </a>
     <nav>
-        <a href="../index.html">Главная</a>
-        <a href="../header/services.html">Услуги</a>
-        <a href="../header/contact.html">Контакты</a>
-        <a href="../header/apply.html" class="nav-btn">Подать заявку</a>
+        <div class="dropdown">
+            <a class="dropbtn">Поступление <span class="arrow">▾</span></a>
+            <div class="dropdown-content">
+                <a href="../header/services.html">Наши услуги</a>
+                <a href="../header/universities.html">Каталог ВУЗов</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a class="dropbtn">Контакт <span class="arrow">▾</span></a>
+            <div class="dropdown-content">
+                <a href="../header/contact.html">Контакты</a>
+                <a href="../header/apply.html" style="color: var(--color-red)">Подать заявку</a>
+            </div>
+        </div>
+
+        <a href="../header/profile.html" class="nav-btn">Личный кабинет</a>
     </nav>
 </header>
 
@@ -208,17 +224,11 @@
         <h2 style="color: white; margin-bottom: 20px;">Готов к большой карьере?</h2>
         <p style="max-width: 600px; margin: 0 auto 40px;">В SGH сложный вступительный процесс (часто нужен тест по математике). Мы поможем подготовиться.</p>
         <a href="../header/contact.html" class="big-btn" style="background: white; color: var(--color-red);">Оценить шансы</a>
+        <div class="copyright">© 2024 WU Admission.</div>
     </section>
 
 </main>
 
-<footer>
-    <div class="footer-content">
-        <h2>Поступим вместе</h2>
-        <a href="../header/contact.html" class="big-btn">Оставить заявку</a>
-    </div>
-    <div class="copyright">© 2024 WU Admission.</div>
-</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

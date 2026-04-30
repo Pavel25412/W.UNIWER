@@ -22,11 +22,23 @@
     <span class="logo-text">W.Uniwer</span>
   </a>
   <nav>
-    <a href="index.html" class="active">Главная</a>
-    <a href="header/services.html">Услуги</a>
-    <a href="header/universities.html" class="active" style="color: var(--color-red);">ВУЗы</a>
-    <a href="header/contact.html">Контакты</a>
-    <a href="header/apply.html" class="nav-btn">Подать заявку</a>
+    <div class="dropdown">
+      <a class="dropbtn">Поступление <span class="arrow">▾</span></a>
+      <div class="dropdown-content">
+        <a href="header/services.html">Наши услуги</a>
+        <a href="header/universities.html">Каталог ВУЗов</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a class="dropbtn">Контакт <span class="arrow">▾</span></a>
+      <div class="dropdown-content">
+        <a href="header/contact.html">Контакты</a>
+        <a href="header/apply.html" style="color: var(--color-red)">Подать заявку</a>
+      </div>
+    </div>
+
+    <a href="header/profile.html" class="nav-btn">Личный кабинет</a>
   </nav>
 </header>
 
