@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <a href="../header/profile.html" class="nav-btn">Личный кабинет</a>
+    <a href="../header/profile/login.html" class="nav-btn">Личный кабинет</a>
   </nav>
 </header>
 
@@ -193,44 +193,56 @@
     updateProgress();
   }
 
-  // === ОТПРАВКА ДАННЫХ В GOOGLE ТАБЛИЦУ ===
   function submitForm() {
+    // 1. Валидация последнего шага
     if (!validateStep(3)) {
-      alert("Пожалуйста, заполните поле 'Какое направление вас интересует?'");
+      alert("Пожалуйста, заполните обязательные поля!");
       return;
     }
 
     const btn = document.getElementById('submitBtn');
-    btn.innerText = "Отправка...";
+    btn.innerText = "Синхронизация с БД...";
     btn.disabled = true;
 
-    const GOOGLE_APP_URL = "https://script.google.com/macros/s/AKfycbwC2W2vRUHMsWBHIffIsVAbIPenRavvP8YJbdkE2eajfnNgnZKYlL-nUwIQsg57vmHY/exec";
+    // Собираем данные
+    const name = document.getElementById('applyName').value;
+    const surname = document.getElementById('applySurname').value;
+    const email = document.getElementById('applyEmail').value;
 
-    const formData = new FormData();
-    formData.append("name", document.getElementById('applyName').value);
-    formData.append("surname", document.getElementById('applySurname').value);
-    formData.append("phone", document.getElementById('applyPhone').value);
-    formData.append("email", document.getElementById('applyEmail').value);
-    formData.append("region", document.getElementById('applyRegion').value);
-    formData.append("interests", document.getElementById('applyInterests').value);
-    formData.append("questions", document.getElementById('applyQuestions').value);
+    // Формируем объект для Java (согласно классу RegisterRequest)
+    const data = {
+      fullName: name + " " + surname, // Склеиваем имя и фамилию
+      email: email
+    };
 
-    fetch(GOOGLE_APP_URL, {
+    // 2. Отправка в твой Java Бэкенд (порт 7070)
+    fetch('http://localhost:7070/api/register', {
       method: 'POST',
-      mode: 'no-cors', // ЭТО САМАЯ ВАЖНАЯ СТРОЧКА!
-      body: formData
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
     })
-            .then(() => {
-              // Экран успеха
-              document.getElementById('step3').classList.remove('active');
-              document.getElementById('progressContainer').style.display = 'none';
-              document.getElementById('stepSuccess').classList.add('active');
+            .then(async response => {
+              if (response.ok) {
+                // Если Java ответила 201 (Created), показываем экран успеха
+                document.getElementById('step3').classList.remove('active');
+                document.getElementById('progressContainer').style.display = 'none';
+                document.getElementById('stepSuccess').classList.add('active');
+              } else {
+                const errorText = await response.text();
+                alert("Ошибка: " + errorText);
+                btn.innerText = "Отправить заявку ✔";
+                btn.disabled = false;
+              }
             })
             .catch(error => {
-              alert("Произошла ошибка сети. Попробуйте еще раз.");
+              console.error('Error:', error);
+              alert("Не удалось связаться с сервером. Проверь, запущен ли MainServer в IntelliJ!");
               btn.innerText = "Отправить заявку ✔";
               btn.disabled = false;
             });
+
   }
 </script>
 

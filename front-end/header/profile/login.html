@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вход в кабинет | W.Uniwer</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         .auth-wrapper {
@@ -117,7 +117,7 @@
 </head>
 <body>
 
-<a href="../index.html" class="back-home">← На главную</a>
+<a href="../../index.html" class="back-home">← На главную</a>
 
 <div class="auth-wrapper">
     <div class="auth-card">
@@ -125,25 +125,52 @@
         <h2>С возвращением!</h2>
         <p class="auth-subtitle">Введите данные для доступа в кабинет абитуриента</p>
 
-        <form class="auth-form" action="profile.html">
+        <form class="auth-form" onsubmit="event.preventDefault(); handleLogin();">
             <div class="input-group">
                 <label>ID абитуриента или Email</label>
-                <input type="text" class="auth-input" placeholder="#WU-2026-00" required>
+                <input type="text" id="loginId" class="auth-input" placeholder="#WU-2026-00" required>
             </div>
-
             <div class="input-group">
                 <label>Пароль</label>
-                <input type="password" class="auth-input" placeholder="••••••••" required>
+                <input type="password" id="password" class="auth-input" placeholder="••••••••" required>
             </div>
-
             <button type="submit" class="btn-login">Войти в систему</button>
         </form>
 
         <div class="auth-footer">
-            Нет аккаунта? <a href="apply.html">Подать заявку</a>
+            Нет аккаунта? <a href="../apply.html">Подать заявку</a>
         </div>
     </div>
 </div>
+
+<script>
+    async function handleLogin() {
+        const loginVal = document.getElementById('loginId').value;
+        const passVal = document.getElementById('password').value;
+
+        try {
+            const response = await fetch('http://localhost:7070/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include',
+                body: JSON.stringify({
+                    username: loginVal,
+                    password: passVal
+                })
+            });
+
+            if (response.ok) {
+                alert("Вход выполнен!");
+                window.location.href = "profile.html";
+            } else {
+                alert("Ошибка: Неверный логин или пароль.");
+            }
+        } catch (error) {
+            console.error("Ошибка сети:", error);
+            alert("Нет связи с сервером W.UNIWER (порт 7070)");
+        }
+    }
+</script>
 
 </body>
 </html>

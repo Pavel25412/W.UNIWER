@@ -1,0 +1,33 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ThrowablePrintStackTrace" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="back-end" />
+          <option value="back-end" />
+          <option value="back-end" />
+          <option value="back-end" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="com.sun.mail:jakarta.mail:2.0.1" />
+          <option value="org.eclipse.jetty:jetty-http:11.0.20" />
+          <option value="org.eclipse.jetty:jetty-server:11.0.20" />
+          <option value="com.fasterxml.jackson.core:jackson-core:2.17.0" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
