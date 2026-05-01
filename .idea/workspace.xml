@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c71b8-3db4-49cd-a222-1905579fa750" name="Changes" comment="Bug fix">
-      <change afterPath="$PROJECT_DIR$/back-end/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/main/java/DatabaseConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/main/java/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/main/java/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back-end/src/main/java/MainServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/scratch.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front-end/header/profile/create_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/header/apply.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/apply.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/header/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/header/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/profile/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/header/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/profile/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/header/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/header/universities.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/universities.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/service/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/service/language.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/language.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/service/legalization.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/legalization.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/service/school.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/school.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/service/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/service/vip.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/service/vip.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/university/agh.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/agh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/university/jagiellonian.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/jagiellonian.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/university/sgh.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/sgh.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/university/umcs.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/umcs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/university/warsaw.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/warsaw.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/university/wroclaw.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/university/wroclaw.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +189,7 @@
       <workItem from="1777507813948" duration="408000" />
       <workItem from="1777538257103" duration="7287000" />
       <workItem from="1777554057838" duration="10810000" />
-      <workItem from="1777589123498" duration="3697000" />
+      <workItem from="1777589123498" duration="4541000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
