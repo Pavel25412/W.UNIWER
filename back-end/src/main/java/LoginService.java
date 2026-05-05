@@ -138,11 +138,11 @@ public class LoginService {
 
         if (success) {
             System.out.println("---");
-            System.out.println("РЕЗУЛЬТАТ: Пользователь успешно создан!");
+            System.out.println("Пользователь успешно создан!");
             System.out.println("Теперь проверь таблицу USERS в SQL Developer.");
         } else {
             System.err.println("---");
-            System.err.println("РЕЗУЛЬТАТ: Ошибка. Проверь консоль на наличие SQLException.");
+            System.err.println("РЕЗУЛЬТАТ: Ошибка");
         }
     }
 }

@@ -53,9 +53,8 @@ public class MainServer {
             String userIdentifier = ctx.sessionAttribute("currentUser");
 
             if (userIdentifier != null) {
-                // Получаем расширенные данные из базы
                 Map<String, String> userInfo = loginService.getUserInfo(userIdentifier);
-                ctx.json(userInfo); // Отправляем как JSON объект
+                ctx.json(userInfo);
             } else {
                 ctx.status(401).result("Не авторизован");
             }

@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b27c71b8-3db4-49cd-a222-1905579fa750" name="Changes" comment="Bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/MainServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/target/classes/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/target/classes/MainServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/MainServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/target/classes/PasswordRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/PasswordRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/target/classes/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,54 +72,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DatabaseConfig (1).executor": "Run",
-    "Application.DatabaseConfig.executor": "Run",
-    "Application.LoginService.executor": "Run",
-    "Application.MainServer.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.services2.html.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "front-end",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/W.UNIWER/Website/back-end/Services/AuthenticationService/src",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "C:/Users/katyp/AppData/Roaming/JetBrains/WebStorm2025.3/node/versions/24.13.0/node",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "D:/W.UNIWER/Website/src/main.js",
-    "prettierjs.PrettierConfiguration.Package": "D:\\W.UNIWER\\Website\\front-end\\node_modules\\prettier",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.language",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DatabaseConfig (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.DatabaseConfig.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginService.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainServer.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.services2.html.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;front-end&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/W.UNIWER/Website/back-end/Services/AuthenticationService/src&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/katyp/AppData/Roaming/JetBrains/WebStorm2025.3/node/versions/24.13.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/W.UNIWER/Website/src/main.js&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\W.UNIWER\\Website\\front-end\\node_modules\\prettier&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "oracle"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA",
-      "Declarative",
-      "Oracle",
-      "Markdown"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;,
+      &quot;Declarative&quot;,
+      &quot;Oracle&quot;,
+      &quot;Markdown&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\W.UNIWER\Website\back-end\Services\AuthenticationService\src" />
@@ -189,7 +197,9 @@
       <workItem from="1777507813948" duration="408000" />
       <workItem from="1777538257103" duration="7287000" />
       <workItem from="1777554057838" duration="10810000" />
-      <workItem from="1777589123498" duration="4541000" />
+      <workItem from="1777589123498" duration="4949000" />
+      <workItem from="1777634432286" duration="1771000" />
+      <workItem from="1778003182742" duration="878000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />

@@ -3,7 +3,7 @@ import jakarta.mail.internet.*;
 import java.util.Properties;
 
 public class EmailService {
-
+    // i didn't write this code, it just testing
     // ВАЖНО: Здесь нужен не обычный пароль от почты, а "Пароль приложения"
     private static final String SENDER_EMAIL = "wuniwer2@gmail.com";
     private static final String APP_PASSWORD = "твой_16_значный_пароль";
