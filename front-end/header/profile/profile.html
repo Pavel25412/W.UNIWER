@@ -330,22 +330,29 @@
         }, 1500);
     });
 
+    // Твой API Fetch - Проверка сессии при загрузке страницы
     (async () => {
         try {
             const response = await fetch('http://localhost:7070/api/check-session', {
-                credentials: 'include'
+                credentials: 'include' // Обязательно передаем куки
             });
 
             if (!response.ok) {
-                console.warn("API недоступен, показываем демо-данные");
-            } else {
-                const userData = await response.json();
-                document.getElementById('userNameDisplay').innerText = userData.fullName.split(' ')[0] + '!';
-                document.getElementById('userIdDisplay').innerText = "ID абитуриента: " + userData.loginId;
-                console.log("Данные загружены для: " + userData.fullName);
+                window.location.replace("../profile/login.html");
+                return;
             }
+
+            const userData = await response.json();
+            document.getElementById('userNameDisplay').innerText = userData.fullName.split(' ')[0] + '!';
+            document.getElementById('userIdDisplay').innerText = "ID абитуриента: " + userData.loginId;
+
+            setTimeout(() => {
+                document.getElementById('mainProgress').style.width = '75%';
+            }, 300);
+
         } catch (e) {
-            console.error("Ошибка сети (возможно сервер не запущен):", e);
+            console.error("Ошибка сети (сервер недоступен):", e);
+            window.location.replace("../profile/login.html");
         }
     })();
 </script>
