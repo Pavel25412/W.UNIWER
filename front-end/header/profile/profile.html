@@ -10,17 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* Упрощенные стили кабинета */
         .dashboard-wrapper {
             padding: 140px 5% 60px;
-            max-width: 1200px; /* Ограничиваем ширину, чтобы контент не растягивался на огромных экранах */
+            max-width: 1200px;
             margin: 0 auto;
             background-color: var(--color-white);
         }
 
-        /* Чистая шапка без лишних рамок */
         .dashboard-header {
             margin-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
 
         .dashboard-header h1 {
@@ -34,115 +35,97 @@
             font-size: 1rem;
         }
 
-        /* Сетка */
+        .btn-settings {
+            background-color: #FAFAFA;
+            color: var(--color-dark);
+            border: 1px solid #EAEAEA;
+            padding: 12px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-family: var(--font-head);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .btn-settings:hover { background-color: #EAEAEA; }
+
         .dashboard-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 40px;
         }
 
-        /* Карточки в стиле минимализма (Flat design) */
         .clean-card {
-            background-color: #FAFAFA; /* Очень легкий серый вместо рамок */
+            background-color: #FAFAFA;
             border-radius: 20px;
             padding: 40px;
         }
 
-        /* Тонкий прогресс-бар */
-        .progress-container {
-            margin: 30px 0;
-        }
-
-        .bar-bg {
-            background: #EAEAEA;
-            height: 6px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
+        .progress-container { margin: 30px 0; }
+        .bar-bg { background: #EAEAEA; height: 6px; border-radius: 10px; overflow: hidden; }
         .bar-fill {
-            background: var(--color-red);
-            height: 100%;
-            border-radius: 10px;
-            width: 0%; /* Анимируем через обычный CSS/JS */
+            background: var(--color-red); height: 100%; border-radius: 10px; width: 0%;
             transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Аккуратный список шагов */
-        .step-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .step-list { list-style: none; padding: 0; margin: 0; }
+        .step-item { display: flex; justify-content: space-between; padding: 16px 0; border-bottom: 1px solid #EAEAEA; font-weight: 500; font-size: 0.95rem; }
+        .step-item:last-child { border-bottom: none; }
+        .step-item.active { color: var(--color-red); font-weight: 700; }
+        .step-item.muted { color: #BBBBBB; }
 
-        .step-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 16px 0;
-            border-bottom: 1px solid #EAEAEA;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .step-item:last-child {
-            border-bottom: none;
-        }
-
-        .step-item.active {
-            color: var(--color-red);
-            font-weight: 700;
-        }
-
-        .step-item.muted {
-            color: #BBBBBB;
-        }
-
-        /* Простые ссылки на документы */
         .doc-link {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid #EAEAEA;
-            text-decoration: none;
-            color: var(--color-dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: 0.2s;
+            display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #EAEAEA;
+            text-decoration: none; color: var(--color-dark); font-weight: 600; font-size: 0.95rem; transition: 0.2s;
         }
-
-        .doc-link:hover {
-            color: var(--color-red);
-        }
-
-        .doc-link span {
-            color: #888;
-            font-weight: 400;
-            font-size: 0.85rem;
-        }
+        .doc-link:hover { color: var(--color-red); }
+        .doc-link span { color: #888; font-weight: 400; font-size: 0.85rem; }
 
         /* Чистая кнопка */
         .btn-upload {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid var(--color-red);
-            background: transparent;
-            color: var(--color-red);
-            border-radius: 12px;
-            font-family: var(--font-head);
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 25px;
-            transition: all 0.3s ease;
+            width: 100%; padding: 15px; border: 1px solid var(--color-red); background: transparent; color: var(--color-red);
+            border-radius: 12px; font-family: var(--font-head); font-weight: 700; cursor: pointer; margin-top: 25px; transition: all 0.3s ease;
         }
+        .btn-upload:hover { background-color: var(--color-red); color: var(--color-white); }
 
-        .btn-upload:hover {
-            background-color: var(--color-red);
-            color: var(--color-white);
+        /* ================= НАСТРОЙКИ ПРОФИЛЯ (ВКЛАДКИ) ================= */
+        #settings-view { display: none; animation: fadeIn 0.4s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .tabs-header { display: flex; gap: 30px; margin-bottom: 30px; border-bottom: 2px solid #EAEAEA; }
+        .tab-btn {
+            background: none; border: none; padding: 15px 0; font-size: 1rem; font-weight: 600;
+            color: #888; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+            font-family: var(--font-main); transition: 0.3s;
         }
+        .tab-btn:hover { color: var(--color-dark); }
+        .tab-btn.active { color: var(--color-dark); border-bottom: 3px solid var(--color-red); }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s; }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 25px; }
+        .form-group label { display: block; margin-bottom: 10px; font-size: 0.9rem; font-weight: 600; color: #888;}
+        .form-group input {
+            width: 100%; padding: 15px; border: 1px solid #EAEAEA;
+            border-radius: 12px; box-sizing: border-box; font-family: var(--font-main);
+            font-weight: 500; font-size: 1rem; background: #FAFAFA;
+            transition: 0.3s;
+        }
+        .form-group input:focus { outline: none; border-color: var(--color-red); background: var(--color-white); }
+
+        .btn-save {
+            background: var(--color-red); color: var(--color-white); border: none; padding: 15px 40px;
+            border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 20px;
+            font-family: var(--font-head); transition: 0.3s;
+        }
+        .btn-save:hover { opacity: 0.9; }
 
         @media (max-width: 900px) {
             .dashboard-grid { grid-template-columns: 1fr; }
             .dashboard-wrapper { padding-top: 100px; }
+            .dashboard-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .form-row { grid-template-columns: 1fr; gap: 15px; }
         }
     </style>
 </head>
@@ -176,11 +159,14 @@
 
 <main class="dashboard-wrapper">
     <div class="dashboard-header">
-        <h1>Привет, <span class="text-red" id="userNameDisplay">...</span></h1>
-        <p class="text-muted" id="userIdDisplay">ID абитуриента: ...</p>
+        <div>
+            <h1>Привет, <span class="text-red" id="userNameDisplay">...</span></h1>
+            <p class="text-muted" id="userIdDisplay">ID абитуриента: ...</p>
+        </div>
+        <button class="btn-settings" id="toggleViewBtn" onclick="toggleViews()">⚙️ Настройки профиля</button>
     </div>
 
-    <div class="dashboard-grid">
+    <div class="dashboard-grid" id="dashboard-view">
         <div class="clean-card">
             <h3>Прогресс поступления</h3>
             <div class="progress-container">
@@ -212,6 +198,70 @@
             </div>
         </div>
     </div>
+
+    <div id="settings-view" class="clean-card">
+        <div class="tabs-header">
+            <button class="tab-btn active" onclick="switchTab(event, 'tab-personal')">Dane osobowe</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-address')">Adresy</button>
+            <button class="tab-btn" onclick="switchTab(event, 'tab-education')">Wykształcenie</button>
+        </div>
+
+        <form id="profileForm">
+            <div id="tab-personal" class="tab-content active">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Imię / Имя</label>
+                        <input type="text" id="firstName" value="Павел">
+                    </div>
+                    <div class="form-group">
+                        <label>Nazwisko / Фамилия</label>
+                        <input type="text" id="surname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>PESEL / Номер паспорта</label>
+                        <input type="text" id="pesel">
+                    </div>
+                    <div class="form-group">
+                        <label>Data urodzenia / Дата рождения</label>
+                        <input type="date" id="dob">
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-address" class="tab-content">
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label>Adres zamieszkania / Адрес проживания</label>
+                    <input type="text" id="address" placeholder="np. ul. Tomasza Zana 11, 20-601 Lublin">
+                </div>
+                <div class="form-group">
+                    <label>Adres korespondencyjny / Почтовый адрес</label>
+                    <input type="text" id="mailingAddress" placeholder="Wypełnij, jeśli jest inny">
+                </div>
+            </div>
+
+            <div id="tab-education" class="tab-content">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Dokument / Документ (np. Matura)</label>
+                        <input type="text" id="eduDoc">
+                    </div>
+                    <div class="form-group">
+                        <label>Numer dokumentu / Номер</label>
+                        <input type="text" id="eduNum">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Wydany przez / Кем выдан</label>
+                    <input type="text" id="eduIssuer">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-save">Zapisz zmiany</button>
+        </form>
+    </div>
+
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -228,15 +278,56 @@
                 toggleClass: { className: "scrolled", targets: "header" }
             });
 
-            gsap.from(".animate-on-load", {
-                y: 40,
-                opacity: 0,
-                stagger: 0.15,
-                duration: 0.8,
-                ease: "power3.out",
-                delay: 0.2
-            });
+            setTimeout(() => {
+                document.getElementById('mainProgress').style.width = '75%';
+            }, 300);
         }
+    });
+
+    let isSettingsOpen = false;
+    function toggleViews() {
+        const dashboard = document.getElementById('dashboard-view');
+        const settings = document.getElementById('settings-view');
+        const btn = document.getElementById('toggleViewBtn');
+
+        isSettingsOpen = !isSettingsOpen;
+
+        if (isSettingsOpen) {
+            dashboard.style.display = 'none';
+            settings.style.display = 'block';
+            btn.innerHTML = '⬅ Вернуться назад';
+        } else {
+            settings.style.display = 'none';
+            dashboard.style.display = 'grid';
+            btn.innerHTML = '⚙️ Настройки профиля';
+        }
+    }
+
+    function switchTab(evt, tabId) {
+        evt.preventDefault();
+        const contents = document.querySelectorAll('.tab-content');
+        contents.forEach(c => c.classList.remove('active'));
+
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(b => b.classList.remove('active'));
+
+        document.getElementById(tabId).classList.add('active');
+        evt.currentTarget.classList.add('active');
+    }
+
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.querySelector('.btn-save');
+        const originalText = btn.innerHTML;
+
+        btn.innerHTML = 'Zapisano! ✔️';
+        btn.style.backgroundColor = '#2ecc71';
+
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.backgroundColor = 'var(--color-red)';
+            toggleViews();
+        }, 1500);
     });
 
     (async () => {
@@ -246,21 +337,17 @@
             });
 
             if (!response.ok) {
-                window.location.href = "login.html";
+                console.warn("API недоступен, показываем демо-данные");
             } else {
                 const userData = await response.json();
-
-                document.getElementById('userNameDisplay').innerText = userData.fullName.split(' ')[0] + '!'; // Только имя
+                document.getElementById('userNameDisplay').innerText = userData.fullName.split(' ')[0] + '!';
                 document.getElementById('userIdDisplay').innerText = "ID абитуриента: " + userData.loginId;
-
                 console.log("Данные загружены для: " + userData.fullName);
             }
         } catch (e) {
-            console.error("Ошибка сети:", e);
-            window.location.href = "login.html";
+            console.error("Ошибка сети (возможно сервер не запущен):", e);
         }
     })();
-
 </script>
 </body>
 </html>

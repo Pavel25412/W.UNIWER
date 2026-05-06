@@ -1,0 +1,167 @@
+\documentclass[10pt, a4paper]{article} % Уменьшили базовый шрифт до 10pt
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, polish]{babel}
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1cm]{geometry} % Уменьшили нижнее поле
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{wuDark}{HTML}{222222}
+
+% Убираем абзацные отступы и номера страниц (на бланках их не ставят)
+\setlength{\parindent}{0pt}
+\pagestyle{empty} 
+
+\begin{document}
+
+% --- ЛОГОТИП И ШАПКА ПЛАТФОРМЫ ---
+\noindent
+\begin{minipage}{0.65\textwidth} % Левая часть экрана (под лого и название)
+    
+    % Коробка 1: Только картинка
+    \begin{minipage}[c]{2cm} 
+        \includegraphics[height=1.5cm]{D:/W.UNIWER/Website/front-end/logo/logo.png}
+    \end{minipage}%
+    \hspace{0.2cm} % Пробел между логотипом и текстом (как gap в CSS)
+    % Коробка 2: Только текст
+    \begin{minipage}[c]{8cm} 
+        \textbf{\Large W.UNIWER} \\
+        \scriptsize System Rekrutacyjny / Recruitment System
+    \end{minipage}
+    
+\end{minipage}%
+\begin{minipage}{0.35\textwidth} % Правая часть экрана (контакты)
+    \raggedleft
+    \textbf{\color{wuDark} www.w-uniwer.pl} \\
+    \scriptsize e-mail: biuro@w-uniwer.pl
+\end{minipage}
+
+\vspace{0.4cm}
+
+% --- ВЕРХНИЙ БЛОК: ИНФОРМАЦИЯ О ФАКУЛЬТЕТЕ ---
+\noindent
+\renewcommand{\arraystretch}{1.2} % Делаем строки таблицы чуть плотнее
+\begin{tabular}{|l|p{11.5cm}|}
+\hline
+\scriptsize Jednostka organizacyjna: & \small \textbf{{{FACULTY}}} \\
+\hline
+\scriptsize Program studiów / Kierunek: & \small \textbf{{{MAJOR}}} \\
+\hline
+\scriptsize Poziom i forma studiów: & \small \textbf{{{DEGREE-LEVEL}}, {{STUDY-MODE}}} \\
+\hline
+\scriptsize Rok akademicki: & \small \textbf{{{YEAR}}} \\
+\hline
+\end{tabular}
+
+\vspace{0.3cm} % Минимальный отступ
+
+% --- ДАТА И ID ---
+\noindent
+\begin{minipage}{0.3\textwidth}
+    \begin{tabular}{|c|}
+    \hline
+    \makebox[3cm]{\textbf{{{DATE}}}} \\
+    \hline
+    \end{tabular} \\
+    \footnotesize (Data / Date)
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+    \raggedleft
+    \footnotesize Numer zgłoszenia (W.UNIWER ID): \\
+    \textbf{\large {{CANDIDATE-ID}}}
+\end{minipage}
+
+\vspace{0.4cm}
+
+% --- ЗАГОЛОВОК ДОКУМЕНТА ---
+\begin{center}
+    \large \textbf{DO REKTORA} \\
+    \large \textbf{{{UNIVERSITY-NAME}}} \\
+    \vspace{0.3cm}
+    \Large \textbf{PODANIE O PRZYJĘCIE NA STUDIA} \\
+    \small \textit{Application for admission to studies}
+\end{center}
+
+\vspace{0.3cm}
+\noindent \small Proszę o przyjęcie mnie na studia w {{UNIVERSITY-NAME}}. \\
+\scriptsize \textit{I hereby apply for admission to studies at {{UNIVERSITY-NAME}}.}
+
+\vspace{0.4cm}
+
+% --- PESEL / ПАСПОРТ ---
+\noindent
+\large \textbf{PESEL / ID:} \framebox[8cm]{\rule{0pt}{12pt} \textbf{\large {{PESEL}}}}
+
+\vspace{0.3cm}
+
+% --- РАЗДЕЛ 1: ЛИЧНЫЕ ДАННЫЕ ---
+\begin{center}
+    \large \textbf {Dane osobowe / Personal Data} \\
+\end{center}
+\vspace{-0.3cm}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{0.1cm}
+
+\noindent
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l X l X@{}}
+\small Nazwisko / Surname: & \small \textbf{{{SURNAME}}} & \small Imię / First Name: & \small \textbf{{{FIRST-NAME}}} \\
+\small Data urodzenia / DOB: & \small \textbf{{{DOB}}} & \small Miejsce urodzenia / POB: & \small \textbf{{{POB}}} \\
+\small Obywatelstwo / Citizenship: & \small \textbf{{{CITIZENSHIP}}} & \small Telefon / Phone: & \small \textbf{{{PHONE}}} \\
+\small E-mail: & \small \textbf{{{EMAIL}}} & \small Płeć / Gender: & \small \textbf{{{GENDER}}} \\
+\end{tabularx}
+
+\vspace{0.3cm}
+
+% --- РАЗДЕЛ 2: АДРЕС ---
+\begin{center}
+    \large \textbf {Adresy / Addresses} \\
+\end{center}
+\vspace{-0.3cm}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{0.1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\small Adres zamieszkania / Home Address: & \small \textbf{{{ADDRESS}}} \\
+\small Adres korespondencyjny / Mailing: & \small \textbf{{{MAILING-ADDRESS}}} \\
+\end{tabularx}
+
+\vspace{0.3cm}
+
+% --- РАЗДЕЛ 3: ОБРАЗОВАНИЕ ---
+\begin{center}
+    \large \textbf {Wykształcenie / Education} \\
+\end{center}
+\vspace{-0.3cm}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{0.1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}l X l X@{}}
+\small Dokument / Document: & \small \textbf{{{EDU-DOC}}} & \small Numer / Number: & \small \textbf{{{EDU-NUM}}} \\
+\small Wydany przez / Issued by: & \small \textbf{{{EDU-ISSUER}}} & \small Rok wydania / Year: & \small \textbf{{{EDU-YEAR}}} \\
+\end{tabularx}
+
+\vspace{0.5cm} % Немного отделяем юридический блок
+
+% --- ЮРИДИЧЕСКИЙ ТЕКСТ И ПОДПИСЬ ---
+\noindent
+\fontsize{6pt}{7pt}\selectfont % Самый мелкий шрифт для RODO, как в реальных договорах
+Administratorem danych osobowych gromadzonych w toku rekrutacji jest {{UNIVERSITY-NAME}} oraz platforma W.UNIWER. Podanie danych jest dobrowolne, jednak konieczne do realizacji celów rekrutacyjnych, a w przypadku zakwalifikowania się na studia również w trakcie realizacji procesu kształcenia. Podstawą do przetwarzania danych osobowych kandydatów na studia jest ustawa z dnia 20 lipca 2018 r. Prawo o szkolnictwie wyższym i nauce. Oświadczam, że zapoznałem/am się z klauzulą informacyjną dotyczącą przetwarzania danych osobowych. Świadomy/a odpowiedzialności karnej za podanie nieprawdziwych danych, potwierdzam zgodność powyższych informacji ze stanem faktycznym.
+
+\vspace{1.5cm} % Место для физической подписи ручкой
+
+\hfill
+\begin{minipage}{6cm}
+    \centering
+    \rule{6cm}{0.5pt} \\
+    \vspace{0.1cm}
+    \scriptsize Prawdziwość danych zawartych w podaniu \\
+    potwierdzam własnym podpisem \\
+    \tiny \textit{(Applicant's Signature)}
+\end{minipage}
+
+\end{document}
