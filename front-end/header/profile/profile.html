@@ -330,11 +330,10 @@
         }, 1500);
     });
 
-    // Твой API Fetch - Проверка сессии при загрузке страницы
     (async () => {
         try {
             const response = await fetch('http://localhost:7070/api/check-session', {
-                credentials: 'include' // Обязательно передаем куки
+                credentials: 'include'
             });
 
             if (!response.ok) {
