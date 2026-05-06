@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b27c71b8-3db4-49cd-a222-1905579fa750" name="Changes" comment="Bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/MainServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/target/classes/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/LoginRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/target/classes/MainServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/MainServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/target/classes/PasswordRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/PasswordRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/target/classes/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/target/classes/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +191,7 @@
       <workItem from="1777554057838" duration="10810000" />
       <workItem from="1777589123498" duration="4949000" />
       <workItem from="1777634432286" duration="1771000" />
-      <workItem from="1778003182742" duration="878000" />
+      <workItem from="1778003182742" duration="2272000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />

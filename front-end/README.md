@@ -6,15 +6,13 @@
 
 * **Core:** HTML5 (Semantic Markup), CSS3 (Custom Properties / Variables).
 * **JavaScript:** ES6+ (DOM Manipulation, Event Handling).
-* **Animation Engine:** GSAP (GreenSock Animation Platform) — использование таймлайнов для синхронизации сложных визуальных последовательностей.
+* **Animation Engine:** GSAP - использование таймлайнов для синхронизации сложных визуальных последовательностей.
 * **Scroll Logic:** GSAP ScrollTrigger — реализация динамических состояний интерфейса в зависимости от вектора и позиции скролла.
 * **Layout Patterns:** CSS Grid (Bento-grid), Flexbox, Floating UI patterns.
 
 ## 🌟 Ключевые технические особенности
 
 ### 1. Адаптивная навигационная система (Dynamic Header)
-Реализован паттерн **Sticky-Floating Header**. Навигационная панель переключается между состояниями `Static` и `Floating Tablet` на основе триггеров смещения по оси Y.
-* **Решенная проблема:** Устранение конфликтов между `CSS Transform` и `GSAP Sequencing` через использование центрирования на базе `margin: 0 auto` вместо аппаратных сдвигов, что позволило избежать лагов перерисовки (Reflow/Repaint).
 * **UI-эффект:** Использование `backdrop-filter: blur` для реализации эффекта Glassmorphism.
 
 ### 2. Личный кабинет абитуриента (Dashboard)
