@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/header/profile/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/profile/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/header/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/header/profile/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +195,7 @@
       <workItem from="1777589123498" duration="4949000" />
       <workItem from="1777634432286" duration="1771000" />
       <workItem from="1778003182742" duration="2272000" />
-      <workItem from="1778069644629" duration="2505000" />
+      <workItem from="1778069644629" duration="2815000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
